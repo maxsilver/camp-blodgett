@@ -11,7 +11,7 @@ Resources
 As a member of this project, you should have access to the following resources.
 
 + [**GitHub** : https://github.com/maxsilver/camp-blodgett](https://github.com/maxsilver/camp-blodgett)
-+ [**Trello** : https://www.pivotaltracker.com/projects/668609](https://www.pivotaltracker.com/projects/668609)
++ [**Trello** : https://trello.com/b/VrToIeHr/camper-registration-database](https://trello.com/b/VrToIeHr/camper-registration-database)
 + [**Google Drive** : https://drive.google.com/folderview?id=0B4_qm5HsWutlQXIyOW5rTG4xUlk](https://drive.google.com/folderview?id=0B4_qm5HsWutlQXIyOW5rTG4xUlk)
 
 
