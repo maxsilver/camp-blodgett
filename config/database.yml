@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rails
+  pool: 5
+  username: rails
+  password: secret
+  host: 192.168.102.10
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rails
+  pool: 5
+  username: rails
+  password: secret
+  host: 192.168.102.20

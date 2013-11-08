@@ -32,7 +32,7 @@ rvm reload
 
 # Have Bundler install the required dependencies
 gem install bundler
-bundle
+bundle install --path vendor/bundle
 
 # Create the project databases
 bundle exec rake db:create:all db:schema:load
