@@ -19,9 +19,18 @@ As a member of this project, you should have access to the following resources.
 
 Installing Camp Blodgett for Development
 -----------------------------------
-The guide will assume your using either a Mac OSX or Linux environment, and a compatible package manager (Something like [Homebrew](http://mxcl.github.com/homebrew/) for OSX, or APT for Linux). It also assumes, you have [RVM](https://rvm.io/rvm/install/), and [MySQL](http://dev.mysql.com/doc/refman/5.5/en//installing.html) set up locally.
+The guide will assume your using either a Mac OSX or Linux environment, and a compatible package manager (Something like [Homebrew](http://mxcl.github.com/homebrew/) for OSX, or APT for Linux). It also assumes, you have [RVM](https://rvm.io/rvm/install/), and [MySQL](http://dev.mysql.com/doc/refman/5.5/en//installing.html) set up locally. You will also need VirutalBox and Vagrant to run the development environment.
+
+Install VirtualBox and Vagrant
+
++ [VirtualBox 4.2.18](https://www.virtualbox.org/wiki/Download_Old_Builds_4_2)
++ [Vagrant 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5)
 
 ```bash
+
+# Initialize Vagrant Environment
+vagrant up
+
 # Clone this project from GitHub
 git clone git@github.com:maxsilver/camp-blodgett.git
 cd camp-blodgett
