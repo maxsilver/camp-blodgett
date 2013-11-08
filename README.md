@@ -27,7 +27,6 @@ Install VirtualBox and Vagrant
 + [Vagrant 1.3.5](http://downloads.vagrantup.com/tags/v1.3.5)
 
 ```bash
-
 # Clone this project from GitHub
 git clone git@github.com:maxsilver/camp-blodgett.git
 cd camp-blodgett
