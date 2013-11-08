@@ -43,7 +43,7 @@ gem install bundler
 bundle install --path vendor/bundle
 
 # Create the project databases
-bundle exec rake db:create:all db:schema:load
+bundle exec rake db:create
 
 # Seed some test data for development use (Optional)
 bundle exec rake db:seed
