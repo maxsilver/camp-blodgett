@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   guest_ips.keys.each do |environment|
     config.vm.define environment do |config|
       config.vm.box = 'rails'
-      config.vm.box_url = 'https://s3.amazonaws.com/sandbender-boxes/rails.box'
+      config.vm.box_url = 'http://s3.amazonaws.com/sandbender-boxes/rails_virtualbox.box'
       config.vm.network :private_network, ip: guest_ips[environment]
     end
   end
