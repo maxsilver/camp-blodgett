@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109001337) do
+ActiveRecord::Schema.define(version: 20131109015923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cabin_assignments", force: true do |t|
+    t.integer  "camp_session_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cabin_assignments", ["camp_session_id"], name: "index_cabin_assignments_on_camp_session_id", using: :btree
+
+  create_table "cabins", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "camp_seasons", force: true do |t|
     t.integer  "year"
@@ -30,6 +45,14 @@ ActiveRecord::Schema.define(version: 20131109001337) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "camper_cabin_assignments", force: true do |t|
+    t.integer  "cabin_assignemnt_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "camper_cabin_assignments", ["cabin_assignemnt_id"], name: "index_camper_cabin_assignments_on_cabin_assignemnt_id", using: :btree
 
   create_table "camper_registrations", force: true do |t|
     t.string   "last_name"

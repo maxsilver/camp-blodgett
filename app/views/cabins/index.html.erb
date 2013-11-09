@@ -1,0 +1,20 @@
+<h1>Cabins</h1>
+
+<%= link_to 'New Cabin', new_cabin_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+</tr>
+  </thead>
+<tbody>
+  <% @cabins.each do |cabin| %>
+  <tr>
+    <td><%= link_to cabin.name, cabin_path(cabin) %></td>
+    <td>
+      <%= link_to 'Edit', edit_cabin_path(cabin) %>
+    </td>
+  <% end %>
+</tbody>
+</table>
