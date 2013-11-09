@@ -1,4 +1,5 @@
 <%= form_for @camper_registration do |f| %>
+<%= render partial: 'common/errors', locals: {record: @camper_registration} %>
   <fieldset>
     <legend>Camper Info</legend>
     <%= f.label :new_camper, 'New Camper?' %>
@@ -40,35 +41,35 @@
     <%= f.label :parent_or_guardian_relationship, 'Relationship' %>
     <%= f.text_field :parent_or_guardian_relationship %>
     <%= f.label :parent_or_guardian_home_phone, 'Home Phone' %>
-    <%= f.text_field :parent_or_guardian_home_phone %>
+    <%= f.telephone_field :parent_or_guardian_home_phone %>
     <%= f.label :parent_or_guardian_cell_phone, 'Cell Phone' %>
-    <%= f.text_field :parent_or_guardian_cell_phone %>
+    <%= f.telephone_field :parent_or_guardian_cell_phone %>
     <%= f.label :parent_or_guardian_employer, 'Cell Phone' %>
     <%= f.text_field :parent_or_guardian_employer %>
     <%= f.label :parent_or_guardian_work_phone, 'Work Phone' %>
-    <%= f.text_field :parent_or_guardian_work_phone %>
+    <%= f.telephone_field :parent_or_guardian_work_phone %>
     <%= f.label :parent_or_guardian_email, 'Email' %>
     <%= f.text_field :parent_or_guardian_email %>
     <p>If you are unable to pick your child up aftere camp, please give the names of two adults who have permission to do so:</p>
     <%= f.label :parent_or_guardian_allow_pickup_name_1, 'Name' %>
     <%= f.text_field :parent_or_guardian_allow_pickup_name_1 %>
     <%= f.label :parent_or_guardian_allow_pickup_phone_1, 'Phone' %>
-    <%= f.text_field :parent_or_guardian_allow_pickup_phone_1 %>
+    <%= f.telephone_field :parent_or_guardian_allow_pickup_phone_1 %>
     <%= f.label :parent_or_guardian_allow_pickup_name_2, 'Name' %>
     <%= f.text_field :parent_or_guardian_allow_pickup_name_2 %>
     <%= f.label :parent_or_guardian_allow_pickup_phone_2, 'Phone' %>
-    <%= f.text_field :parent_or_guardian_allow_pickup_phone_2 %>
+    <%= f.telephone_field :parent_or_guardian_allow_pickup_phone_2 %>
   </fieldset>
   <fieldset>
     <legend>Emergency/Health Info</legend>
     <%= f.label :emergency_contact_name, 'Emergency Contact' %>
     <%= f.text_field :emergency_contact_name %>
     <%= f.label :emergency_contact_phone, 'Phone' %>
-    <%= f.text_field :emergency_contact_phone %>
+    <%= f.telephone_field :emergency_contact_phone %>
     <%= f.label :emergency_contact_doctor, 'Doctor' %>
     <%= f.text_field :emergency_contact_doctor %>
     <%= f.label :emergency_contact_doctor_phone, 'Phone' %>
-    <%= f.text_field :emergency_contact_doctor_phone %>
+    <%= f.telephone_field :emergency_contact_doctor_phone %>
     <%= f.label :health_insurance, 'Name of Health Insurance' %>
     <%= f.text_field :health_insurance %>
     <%= f.label :health_insurance_policyholder_name, "Policyholder's name" %>
