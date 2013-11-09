@@ -2,7 +2,7 @@ class CamperRegistrationsController < ApplicationController
   before_action :set_camper_registration, only: [:show, :edit, :update]
 
   def index
-    @camper_registrations = CamperRegistration.all
+    @camper_registrations = CamperRegistration.current_session_campers(params[:year]).page(params[:page]).order('last_name ASC')
   end
 
   def show

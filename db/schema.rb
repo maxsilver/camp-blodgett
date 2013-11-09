@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109034622) do
+ActiveRecord::Schema.define(version: 20131109090848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,16 @@ ActiveRecord::Schema.define(version: 20131109034622) do
   end
 
   add_index "camper_registrations", ["camp_season_id"], name: "index_camper_registrations_on_camp_season_id", using: :btree
+
+  create_table "camper_sessions", force: true do |t|
+    t.integer  "camp_session_id"
+    t.integer  "camper_registration_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "camper_sessions", ["camp_session_id"], name: "index_camper_sessions_on_camp_session_id", using: :btree
+  add_index "camper_sessions", ["camper_registration_id"], name: "index_camper_sessions_on_camper_registration_id", using: :btree
 
   create_table "discounts", force: true do |t|
     t.text     "description"

@@ -5,15 +5,23 @@ unless Rails.env.production?
 
       task :populate => :environment do
         User.destroy_all
+        User.create email: 'admin@campblodgett.org', password: 'changemenow', password_confirmation: 'changemenow'
 
-        User.create email: 'admin@campblodgett.org', password: 'password', password_confirmation: 'password'
+        CampSeason.destroy_all
+        season2012 = CampSeason.create year: 2012
+        season2013 = CampSeason.create year: 2013
+
+        CampSession.destroy_all
+        (1..6).each do |i|
+          CampSession.create number: i, camp_season: season2012, start_date: Date.today, end_date: Date.today
+          CampSession.create number: i, camp_season: season2013, start_date: Date.today, end_date: Date.today
+        end
 
         def rand_in_range(from, to)
           rand * (to - from) + from
         end
 
         CamperRegistration.delete_all
-
         200.times do |kid_n|
           birth_date = Time.at((8.years.ago.to_f - 13.year.ago.to_f)*rand + 13.year.ago.to_f)
           now        = Time.now.utc.to_date
@@ -79,7 +87,10 @@ unless Rails.env.production?
             balance_due_cents: 1000
           }
 
-          CamperRegistration.create!(attrs)
+          camper = CamperRegistration.create!(attrs)
+          season = (kid_n % 2) == 0 ? season2012 : season2013
+          season.camper_registrations << camper
+          season.camp_sessions.all.sample.camper_registrations << camper
         end
 
       end

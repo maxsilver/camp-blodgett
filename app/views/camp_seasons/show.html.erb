@@ -1,1 +1,7 @@
 Year: <%= @camp_season.year %>
+
+<ul>
+<% @camp_season.camp_sessions.each do |session| %>
+<li><%= link_to session.number, camp_session_path(session) %></li>
+<% end %>
+</ul>
