@@ -65,17 +65,17 @@ ActiveRecord::Schema.define(version: 20131109001337) do
     t.string   "health_insurance_policy_number"
     t.string   "health_insurance_group_number"
     t.boolean  "no_health_insurance"
-    t.boolean  "hay_feaver_asthma_respiratory_conditions"
+    t.boolean  "hay_fever_asthma_respiratory_conditions"
     t.boolean  "diabetes"
     t.boolean  "eczema_skin_rashes"
-    t.boolean  "heat_conditions"
+    t.boolean  "heart_conditions"
     t.boolean  "bedwetting"
     t.boolean  "colds_sore_throats_earaches"
     t.boolean  "adhd_odd_ocd"
     t.boolean  "convulsions_seizures"
     t.boolean  "shortness_of_breath"
     t.boolean  "aspergers_autism"
-    t.text     "other"
+    t.text     "other_health_info"
     t.text     "previous_health_history"
     t.boolean  "has_infectious_disease"
     t.text     "has_infection_disease_explanation"
@@ -86,15 +86,13 @@ ActiveRecord::Schema.define(version: 20131109001337) do
     t.date     "polio_shot"
     t.date     "hepatitis_b_shot"
     t.boolean  "parent_has_signed"
-    t.integer  "year"
     t.string   "camp_check_in_location"
-    t.text     "session_numbers"
-    t.integer  "estimated_camp_fee_cents",                 default: 0,     null: false
-    t.string   "estimated_camp_fee_currency",              default: "USD", null: false
-    t.integer  "deposit_amount_cents",                     default: 0,     null: false
-    t.string   "deposit_amount_currency",                  default: "USD", null: false
-    t.integer  "balance_due_cents",                        default: 0,     null: false
-    t.string   "balance_due_currency",                     default: "USD", null: false
+    t.integer  "estimated_camp_fee_cents",                default: 0,     null: false
+    t.string   "estimated_camp_fee_currency",             default: "USD", null: false
+    t.integer  "deposit_amount_cents",                    default: 0,     null: false
+    t.string   "deposit_amount_currency",                 default: "USD", null: false
+    t.integer  "balance_due_cents",                       default: 0,     null: false
+    t.string   "balance_due_currency",                    default: "USD", null: false
     t.integer  "camp_season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -104,9 +102,12 @@ ActiveRecord::Schema.define(version: 20131109001337) do
     t.text     "description"
     t.integer  "amount_cents",    default: 0,     null: false
     t.string   "amount_currency", default: "USD", null: false
+    t.integer  "camp_season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "discounts", ["camp_season_id"], name: "index_discounts_on_camp_season_id", using: :btree
 
   create_table "medications", force: true do |t|
     t.string   "name"
