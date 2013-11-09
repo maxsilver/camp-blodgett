@@ -12,13 +12,13 @@
     <%= f.label :middle_initial, 'Middle Initial' %>
     <%= f.text_field :middle_initial %>
     <%= f.label :gender, 'Gender' %>
-    <%= f.select :gender, options_for_select(['Male', 'Female']) %>
+    <%= f.select :gender, options_for_select(['Male', 'Female']), include_blank: '--- Select One ---' %>
     <%= f.label :address, 'Address' %>
     <%= f.text_field :address %>
     <%= f.label :city, 'City' %>
     <%= f.text_field :city %>
     <%= f.label :state %>
-    <%= f.select :state, options_for_select(['MI', 'OH', 'HI']) %>
+    <%= f.select :state, options_for_select(Carmen::Country.coded('US').subregions.map {|state| [state.name, state.code]}, 'MI') %>
     <%= f.label :zip, 'Zip' %>
     <%= f.text_field :zip %>
     <%= f.label :birth_date, 'Birth Date' %>
@@ -30,7 +30,7 @@
     <%= f.label :school, 'School' %>
     <%= f.text_field :school %>
     <%= f.label :adult_shirt_size, 'Adult Shirt Size' %>
-    <%= f.select :adult_shirt_size, options_for_select(['S', 'M', 'L', 'XL']) %>
+    <%= f.select :adult_shirt_size, options_for_select(['S', 'M', 'L', 'XL']), include_blank: '--- Select one ---' %>
   </fieldset>
 
   <fieldset>
@@ -103,7 +103,7 @@
     <%= f.label :previous_health_history, "List any previous operations, injuries or physical limitations that may restrict the campers activity" %>
     <%= f.text_field :previous_health_history %>
     <%= f.label :has_infectious_disease, "Does the camper have any infectious disease?" %>
-    <%= f.select :has_infectious_disease, options_for_select(['Yes', 'No']), include_blank: true %>
+    <%= f.select :has_infectious_disease, options_for_select(['Yes', 'No']), include_blank: '--- Select One ---' %>
 
     <%= f.label :has_infectious_disease_explanation, "If yes, explain" %>
     <%= f.text_field :has_infectious_disease_explanation %>
@@ -115,7 +115,7 @@
       <legend>Immunizations</legend>
       <p>(list latest date)</p>
     <%= f.label :immunization_up_to_date, "Up to Date" %>
-    <%= f.select :immunization_up_to_date, options_for_select(['Yes', 'No']), include_blank: true %>
+    <%= f.select :immunization_up_to_date, options_for_select(['Yes', 'No']), include_blank: '--- Select One---' %>
     <%= f.label :tetanus_booster_shot, "Tetanus booster" %>
     <%= f.date_field :tetanus_booster_shot %>
     <%= f.label :measles_mumps_shot, "Measles/Mumps" %>
