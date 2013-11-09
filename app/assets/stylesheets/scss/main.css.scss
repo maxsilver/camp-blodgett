@@ -1,11 +1,13 @@
-@include "partials/variables";
-@include "partials/mixins";
-@include "partials/normalize";
-@include "partials/responsive-utilities";
-@include "partials/forms";
-@include "partials/input-groups";
+@import "compass";
 
-@include "forms";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/normalize";
+@import "partials/responsive-utilities";
+@import "partials/forms";
+@import "partials/input-groups";
+
+@import "forms";
 
 // Utilities go last in case over-rides are needed
-@include "partials/utilities";
+@import "partials/utilities";
