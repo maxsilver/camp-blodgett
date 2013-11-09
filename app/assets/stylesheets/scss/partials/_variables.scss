@@ -17,8 +17,14 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 // Brand colors
 // -------------------------
+$white:                 #fff    !default;
+$blue:                  #105b63 !default;
+$cream:                 #fffad5 !default;
+$yellow:                #ffd34e !default;
+$dirty-yellow:          #db9e36 !default;
+$red:                   #bd4932 !default;
 
-$brand-primary:         #428bca !default;
+$brand-primary:         $blue   !default;
 $brand-success:         #5cb85c !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;

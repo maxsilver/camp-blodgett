@@ -1,0 +1,59 @@
+.login {
+  @include span-columns(6,12);
+  @include push(3);
+  @include clearfix();
+  @include box-shadow($gray-dark 0 0 25px);
+  @include border-radius($border-radius-large);
+  margin-top: 5em;
+}
+
+.window-header {
+  @include background(linear-gradient(top, lighten($brand-primary, 10%), $brand-primary));
+  @include border-top-radius($border-radius-large);
+  overflow: hidden;
+  padding: .5em;
+  border: 1px solid darken($brand-primary,10%);
+
+  h2 {
+    text-align: center;
+    color: $white;
+    @include text-shadow(rgba($gray-darker, 0.5) 1px 1px 0);
+    margin: 0;
+  }
+}
+
+.window-body {
+  padding: 1em;
+  @include border-bottom-radius($border-radius-large);
+  overflow: hidden;
+  border: solid rgba($gray-darker, .5);
+  border-width: 0 1px 1px;
+
+  input[type="email"],
+  input[type="password"] {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  input[type="submit"] {
+    @extend .blue-button;
+    margin: 1em 0 1em;
+    width: 100%;
+  }
+
+  a {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.new_user {
+  @extend .form-control;
+}
+
+.button-holder {
+  @include clearfix();
+  @include span-columns(6 omega, 6);
+}
