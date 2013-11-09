@@ -1,6 +1,6 @@
 <%= form_for @camper_registration do |f| %>
 <%= label_tag :camp_season, 'Season' %>
-<%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, most_recent_season) %>
+<%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, CampSeason.most_recent_year) %>
 <%= render partial: 'common/errors', locals: {record: @camper_registration} %>
   <fieldset>
     <legend>Camper Info</legend>

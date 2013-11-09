@@ -2,6 +2,7 @@ class CamperRegistrationsController < ApplicationController
   before_action :set_camper_registration, only: [:show, :edit, :update]
 
   def index
+    params[:camp_season] ||= CampSeason.most_recent_year
     @camper_registrations = CamperRegistration.current_session_campers(params[:year]).page(params[:page]).order('last_name ASC')
   end
 

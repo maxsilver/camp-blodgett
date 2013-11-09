@@ -2,7 +2,7 @@ class CampSeasonsController < ApplicationController
   before_action :set_camp_season, only: [:show]
 
   def index
-    @camp_seasons = CampSeason.all
+    @camp_seasons = CampSeason.order('year DESC').all
   end
 
   def new

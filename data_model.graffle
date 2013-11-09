@@ -65,8 +65,8 @@
 			<integer>91</integer>
 			<key>Points</key>
 			<array>
-				<string>{581.93578702688205, 373.50893848254242}</string>
-				<string>{602.0642167468834, 268.49106155563976}</string>
+				<string>{573.02657776008311, 373.51738741118015}</string>
+				<string>{601.47401061377616, 268.48262221079335}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -350,8 +350,8 @@ discount_id : integer}</string>
 			<integer>82</integer>
 			<key>Points</key>
 			<array>
-				<string>{482.61999362118223, 315.27870443938019}</string>
-				<string>{569.66764054065936, 373.72113207881546}</string>
+				<string>{479.8005133029481, 315.29212348806101}</string>
+				<string>{560.94369039338926, 373.70644415506746}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -380,7 +380,7 @@ discount_id : integer}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{486.5, 374}, {188, 14}}</string>
+					<string>{{477, 374}, {188, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -416,7 +416,7 @@ discount_id : integer}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{486.5, 388}, {188, 42}}</string>
+					<string>{{477, 388}, {188, 42}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -635,8 +635,8 @@ cabin_id : integer}</string>
 			<integer>61</integer>
 			<key>Points</key>
 			<array>
-				<string>{667.62728652584508, 430.11777900807107}</string>
-				<string>{709.5175145604527, 440.27106867777906}</string>
+				<string>{656.37443682556409, 430.12007134785341}</string>
+				<string>{709.51519950398927, 443.2661223319534}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1251,7 +1251,7 @@ dosage : string}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-11-09 14:33:51 +0000</string>
+	<string>2013-11-09 15:15:23 +0000</string>
 	<key>Modifier</key>
 	<string>David Groulx</string>
 	<key>NotesVisible</key>
@@ -1332,7 +1332,7 @@ dosage : string}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{1283, 327}, {1226, 1091}}</string>
+		<string>{{374, 327}, {1226, 1091}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
