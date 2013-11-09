@@ -1,7 +1,7 @@
 class CampSessionsController < ApplicationController
   before_action :set_camp_session, only: [:show, :edit, :update]
   def index
-    @camp_sessions = CampSession.all
+    @camp_sessions = CampSession.joins(:camp_season).order('camp_seasons.year DESC').order('number ASC').all
   end
 
   def show

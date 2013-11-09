@@ -3,7 +3,8 @@ class CampSession < ActiveRecord::Base
 
   has_many :camper_sessions
   has_many :camper_registrations, through: :camper_sessions
-
+  has_many :cabins, through: :camper_sessions
+  
   validates :start_date, presence: true
   validates :end_date, presence: true
 end

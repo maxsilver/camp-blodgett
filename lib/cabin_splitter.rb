@@ -61,6 +61,7 @@ class CabinSplitter
       
       unless number_of_extra_kids == 0
         cabin << array_of_kids.pop
+        number_of_extra_kids -= 1
       end
     end
 

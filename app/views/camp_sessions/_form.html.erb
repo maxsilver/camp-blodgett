@@ -5,6 +5,6 @@
 <%= f.label :end_date, 'End Date' %>
 <%= f.date_select :end_date, {discard_year: true}, {} %>
 <%= f.label :camp_season, 'Camp Season' %>
-<%= f.collection_select :camp_season_id, CampSeason.all, :id, :year, selected: CampSeason.most_recent.id %>
+<%= f.collection_select :camp_season_id, CampSeason.order('year DESC').all, :id, :year, selected: CampSeason.most_recent.id %>
 <%= f.submit %>
 <% end %>

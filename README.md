@@ -50,13 +50,18 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 
 # Seed some test data for development use (Optional)
-bundle exec rake db:seed
+bundle exec rake db:development:populate
 
 # Start the server
 bundle exec rails server -p 3001
 
 # Open your Webbrowser
 open http://localhost:3001
+
+# Login - if you used the db:development:populate or db:seed
+#         then your default credentials are
+email  : admin@campblodgett.org
+passwd : changemenow
 ```
 
 

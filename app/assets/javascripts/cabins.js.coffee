@@ -5,7 +5,7 @@ $ ->
 
     for cabin in cabins
       id         = $(cabin).attr("id")
-      name       = $(cabin).find("h1").text()
+      name       = $(cabin).find(".cabin-name").text()
 
       sexes = $(cabin).find(".kid .sex").text()
       sex   = ""
@@ -29,12 +29,21 @@ $ ->
       $(kid).find(".move select").val(currentCabin)
 
   moveKid = ->
-    moveTo = $(this).val()
-    kid    = $(this).parents(".kid")
-    $("##{moveTo} table").append(kid)
-
-    updateCabinDropdowns()
-
-    # TODO: Save it
+    $.ajax(
+      type: "POST"
+      url: "/camper_sessions",
+      dataType: 'json',
+      data: 
+        _method: 'PUT',
+        camper_registration_id: 1,
+        camp_session_id: 1,
+        camper_session:
+          cabin_id: 1
+      success: () ->
+        moveTo = $(this).val()
+        kid    = $(this).parents(".kid")
+        $("##{moveTo} table").append(kid)
+        updateCabinDropdowns()
+    )
 
   updateCabinDropdowns()

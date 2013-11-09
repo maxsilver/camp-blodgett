@@ -1,3 +1,10 @@
 <h1><%= "#{@camper_registration.last_name}, #{@camper_registration.first_name}" %></h1>
 
+<h2>Sessions:</h2>
+<ul>
+  <% @camper_registration.camp_sessions.each do |session| %>
+  <li><%= "Session #{session.number}" %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_camper_registration_path(@camper_registration) %>

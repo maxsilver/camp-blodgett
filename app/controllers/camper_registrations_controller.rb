@@ -3,7 +3,7 @@ class CamperRegistrationsController < ApplicationController
 
   def index
     params[:camp_season] ||= CampSeason.most_recent_year
-    @camper_registrations = CamperRegistration.current_session_campers(params[:year]).page(params[:page]).order('last_name ASC')
+    @camper_registrations = CampSeason.campers_for_year(params[:camp_season]).page(params[:page]).order('last_name ASC')
   end
 
   def show

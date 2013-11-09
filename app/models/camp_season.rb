@@ -13,4 +13,7 @@ class CampSeason < ActiveRecord::Base
     most_recent.year
   end
 
+  def self.campers_for_year(y)
+    CamperRegistration.joins(:camp_sessions => :camp_season).where('camp_seasons.year = ?', y)
+  end
 end
