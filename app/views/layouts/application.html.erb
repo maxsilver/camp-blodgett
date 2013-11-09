@@ -5,15 +5,17 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <script type="text/javascript" src="//use.typekit.net/pix2byo.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
-  <body>
-
+  <body class="<%= yield :section %>">
 <%= render 'layouts/nav' %>
+    <div class="container">
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
 <%= yield %>
-
+    </div>
 </body>
 </html>

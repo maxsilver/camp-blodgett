@@ -7,14 +7,22 @@
 @import "partials/normalize";
 @import "partials/responsive-utilities";
 @import "partials/globals";
+@import "partials/type";
 
 // Components
 @import "partials/forms";
 @import "partials/input-groups";
 @import "partials/buttons";
 @import "partials/login";
+@import "partials/nav";
+
+@import "shared";
 
 // Pages
+@import "cabin_assignments/show";
 
 // Utilities go last in case over-rides are needed
 @import "partials/utilities";
+
+// Print
+@import "print";

@@ -1,0 +1,23 @@
+@media print {
+  nav {
+    display: none;
+  }
+
+  body.cabin_assignments {
+    .cabin {
+      page-break-after:always
+    }
+
+    .move {
+      display: none;
+    }
+
+    hr {
+      display: none;
+    }
+
+    header:not(:first-of-type) {
+      display: block;
+    }
+  }
+}
