@@ -3,6 +3,8 @@ CampBlodgett::Application.routes.draw do
 
   devise_for :users
 
+  resources :users
+
   resources :camp_seasons, except: [:destroy] do
     resources :camp_sessions, except: [:destroy]
   end
