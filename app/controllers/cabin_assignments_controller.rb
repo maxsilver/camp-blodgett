@@ -8,6 +8,7 @@ class CabinAssignmentsController < ApplicationController
   def show
     @camp_session = CampSession.where(id: params[:camp_session_id]).first  
     @camp_season  = @camp_session.camp_season
+    @unassigned   = @camp_session.camper_sessions.where(cabin_id: nil)
     CamperSession.auto_assign(@camp_session) unless @camp_session.has_assignments?
   end
 
