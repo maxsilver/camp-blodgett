@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CampBlodgett</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>CampBlodgett</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <nav>
+      <ul>
+	<li><%= link_to 'Camper Registration', camper_registrations_path %></li>
+	<li><%= link_to 'Cabin Assignments', cabin_assignments_path %></li>
+	<li><%= link_to 'Cabins', cabins_path %></li>
+	<li><%= link_to 'Camp Season', camp_seasons_path %></li>
+      </ul>
+    </nav>
 
-</body>
+    <%= yield %>
+
+  </body>
 </html>
