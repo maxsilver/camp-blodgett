@@ -1,0 +1,8 @@
+.new-camp-session {
+  float: left;
+}
+
+#calendar {
+  @include span-columns(12 omega, 12);
+  margin-top: 2em;
+}

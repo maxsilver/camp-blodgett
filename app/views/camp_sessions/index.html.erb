@@ -1,15 +1,14 @@
 <h1>Camp Sessions</h1>
 
-<%= link_to 'New Camp Session', new_camp_session_path %>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Number</th>
       <th>Start Date</th>
       <th>End Date</th>
       <th>Season</th>
-      <th></th>
+      <th>Action</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +24,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'New Camp Session', new_camp_session_path, :class => "new-camp-session blue-button button" %>
 
 
 <div id='calendar'>Loading calendar, please wait...</div>
