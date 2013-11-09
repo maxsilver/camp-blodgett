@@ -28,4 +28,8 @@ class CamperRegistration < ActiveRecord::Base
   def season_year
     camp_sessions.first.camp_season.year
   end
+
+  def bus_check_box_applies
+    camp_check_in_location != 'Camp'
+  end
 end

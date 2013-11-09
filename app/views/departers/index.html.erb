@@ -13,7 +13,11 @@
   <tbody>
     <% @departers.each do |departer| %>
       <tr>
-        <td>[ ]</td>
+        <% if departer.bus_check_box_applies %>
+          <td>[ ]</td>
+        <% else %>
+          <td></td>
+        <% end %>
         <td><%= departer.camp_check_in_location %></td>
         <td><%= departer.gender %></td>
         <td><%= departer.last_name %></td>
