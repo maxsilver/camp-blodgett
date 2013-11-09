@@ -17,6 +17,10 @@
 @import "shared";
 
 // Pages
+@import "cabin_assignments/show";
 
 // Utilities go last in case over-rides are needed
 @import "partials/utilities";
+
+// Print
+@import "print";

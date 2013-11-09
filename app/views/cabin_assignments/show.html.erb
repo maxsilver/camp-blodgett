@@ -1,10 +1,13 @@
-<h1>Cabin Assignments</h1>
-<h2>
-  <%= @camp_season.year %> Session <%= @camp_session.number %>
-  <small>(<%= @camp_session.start_date %>)</small>
-</h2>
+<% content_for :section, "cabin_assignments" %>
 
 <% @camp_session.cabins.uniq.each do |cabin| %>
+<header>
+  <h1>Cabin Assignments</h1>
+  <h2>
+    <%= @camp_season.year %> Session <%= @camp_session.number %>
+    <small>(<%= @camp_session.start_date %>)</small>
+  </h2>
+</header>
 
 <div id="cabin_<%= cabin.id %>" class="cabin" data-cabin-id="<%= cabin.id %>">
   <h3 class="cabin-name"><%= cabin.name %></h3>
@@ -13,20 +16,18 @@
       <tr>
         <th>First</th>
         <th>Last</th>
-        <th>Middle</th>
         <th>Gender</th>
         <th>Birthday</th>
         <th>Grade in Fall</th>
         <th>T-Shirt</th>
         <th>Age</th>
-        <th>Move</th>
+        <th class="move">Move</th>
       </tr>
     </thead>
     <% CamperSession.kids(@camp_session, cabin).each do |cs| %>
     <tr id="kid_<%= cs.camper_registration.id %>" class="kid" data-camp-session-id="<%= @camp_session.id %>" data-camper-registration-id="<%= cs.camper_registration.id %>">
       <td class="first-name"><%= cs.camper_registration.first_name %></td>
       <td class="last-name"><%= cs.camper_registration.last_name %></td>
-      <td class="middle-initial"><%= cs.camper_registration.middle_initial %></td>
       <td class="sex"><%= cs.camper_registration.gender %></td>
       <th class="birthday"><%= cs.camper_registration.birth_date %></th>
       <th class="grade-next-year"><%= cs.camper_registration.grade_next_year %></th>
@@ -37,5 +38,5 @@
     <% end %>
   </table>
 </div>
-
+<hr />
 <% end %>
