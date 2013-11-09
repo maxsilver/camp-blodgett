@@ -6,9 +6,12 @@ class CabinAssignmentsController < ApplicationController
   end
 
   def new
+    @camp_season = CampSeason.last
+    @camp_session = @camp_season.camp_sessions.last
+
     number_of_cabins = Cabin.count
-    boys             = CamperRegistration.males
-    girls            = CamperRegistration.females
+    boys             = @camp_session.camper_registrations.males.order('age_at_start_of_camp DESC')
+    girls            = @camp_session.camper_registrations.females.order('age_at_start_of_camp DESC')
 
     place_holder_cabins = CabinSplitter.new(number_of_cabins, boys, girls).split
 

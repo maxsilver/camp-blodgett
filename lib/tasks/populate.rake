@@ -28,7 +28,7 @@ unless Rails.env.production?
 
         CamperSession.delete_all
         CamperRegistration.delete_all
-        200.times do |kid_n|
+        500.times do |kid_n|
           birth_date = Time.at((8.years.ago.to_f - 13.year.ago.to_f)*rand + 13.year.ago.to_f)
           now        = Time.now.utc.to_date
           age        = now.year - birth_date.year - (birth_date.to_date.change(:year => now.year) > now ? 1 : 0)
