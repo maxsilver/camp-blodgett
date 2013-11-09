@@ -10,7 +10,7 @@ class CampSeason < ActiveRecord::Base
   end
 
   def self.most_recent_year
-    most_recent.year
+    most_recent.present? ? most_recent.year : nil
   end
 
   def self.campers_for_year(y)
