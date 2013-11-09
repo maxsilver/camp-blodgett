@@ -20,7 +20,7 @@
     <tr>
       <td><%= link_to "#{camper.last_name}, #{camper.first_name}", camper_registration_path(camper) %></td>
       <td><%= camper.camp_sessions.map(&:number).join(', ') %></td>
-      <td><%= camper.camp_season.year %></td>
+      <td><%= camper.season_year %></td>
     </tr>
     <% end %>
   </tbody>

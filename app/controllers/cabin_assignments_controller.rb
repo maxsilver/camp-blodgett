@@ -1,8 +1,5 @@
 class CabinAssignmentsController < ApplicationController
-  before_action :set_cabin_assignment, only: [:show, :edit, :update, :destroy]
-
   def index
-    @cabin_assignments = CabinAssignment.all
   end
 
   def show

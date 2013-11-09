@@ -11,19 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109090848) do
+ActiveRecord::Schema.define(version: 20131109135835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cabin_assignments", force: true do |t|
-    t.integer  "camp_session_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "cabin_assignments", ["camp_session_id"], name: "index_cabin_assignments_on_camp_session_id", using: :btree
 
   create_table "cabins", force: true do |t|
     t.string   "name"
@@ -49,13 +40,15 @@ ActiveRecord::Schema.define(version: 20131109090848) do
 
   add_index "camp_sessions", ["camp_season_id"], name: "index_camp_sessions_on_camp_season_id", using: :btree
 
-  create_table "camper_cabin_assignments", force: true do |t|
-    t.integer  "cabin_assignemnt_id"
+  create_table "camper_discounts", force: true do |t|
+    t.integer  "camper_registration_id"
+    t.integer  "discount_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "camper_cabin_assignments", ["cabin_assignemnt_id"], name: "index_camper_cabin_assignments_on_cabin_assignemnt_id", using: :btree
+  add_index "camper_discounts", ["camper_registration_id"], name: "index_camper_discounts_on_camper_registration_id", using: :btree
+  add_index "camper_discounts", ["discount_id"], name: "index_camper_discounts_on_discount_id", using: :btree
 
   create_table "camper_registrations", force: true do |t|
     t.boolean  "new_camper"
@@ -131,10 +124,12 @@ ActiveRecord::Schema.define(version: 20131109090848) do
   create_table "camper_sessions", force: true do |t|
     t.integer  "camp_session_id"
     t.integer  "camper_registration_id"
+    t.integer  "cabin_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "camper_sessions", ["cabin_id"], name: "index_camper_sessions_on_cabin_id", using: :btree
   add_index "camper_sessions", ["camp_session_id"], name: "index_camper_sessions_on_camp_session_id", using: :btree
   add_index "camper_sessions", ["camper_registration_id"], name: "index_camper_sessions_on_camper_registration_id", using: :btree
 

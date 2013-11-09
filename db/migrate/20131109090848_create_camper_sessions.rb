@@ -3,6 +3,7 @@ class CreateCamperSessions < ActiveRecord::Migration
     create_table :camper_sessions do |t|
       t.belongs_to :camp_session, index: true
       t.belongs_to :camper_registration, index: true
+      t.belongs_to :cabin, index: true
 
       t.timestamps
     end

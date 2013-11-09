@@ -48,7 +48,7 @@
 	<key>Creator</key>
 	<string>David Groulx</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -59,21 +59,21 @@
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
-				<integer>68</integer>
+				<integer>69</integer>
 			</dict>
 			<key>ID</key>
-			<integer>76</integer>
+			<integer>91</integer>
 			<key>Points</key>
 			<array>
-				<string>{344.66977973965061, 263.490727732989}</string>
-				<string>{311.46303276034939, 433.509272267011}</string>
+				<string>{581.93578702688205, 373.50893848254242}</string>
+				<string>{602.0642167468834, 268.49106155563976}</string>
 			</array>
 			<key>Style</key>
 			<dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
-					<string>FilledArrow</string>
+					<string>StickArrow</string>
 					<key>Legacy</key>
 					<true/>
 					<key>LineType</key>
@@ -85,77 +85,7 @@
 			<key>Tail</key>
 			<dict>
 				<key>ID</key>
-				<integer>66</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>73</integer>
-			</dict>
-			<key>ID</key>
-			<integer>75</integer>
-			<key>Points</key>
-			<array>
-				<string>{709.69813256107761, 286.57675954367647}</string>
-				<string>{589.90453410558905, 128.39859256899967}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>DoubleStickArrow</string>
-					<key>Legacy</key>
-					<true/>
-					<key>LineType</key>
-					<integer>1</integer>
-					<key>TailArrow</key>
-					<string>StickArrow</string>
-				</dict>
-			</dict>
-			<key>Tail</key>
-			<dict>
-				<key>ID</key>
-				<integer>58</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>73</integer>
-			</dict>
-			<key>ID</key>
-			<integer>74</integer>
-			<key>Points</key>
-			<array>
-				<string>{362.1634734277917, 220.77910998841585}</string>
-				<string>{550.12160572809364, 128.22088994548167}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>DoubleStickArrow</string>
-					<key>Legacy</key>
-					<true/>
-					<key>LineType</key>
-					<integer>1</integer>
-					<key>TailArrow</key>
-					<string>StickArrow</string>
-				</dict>
-			</dict>
-			<key>Tail</key>
-			<dict>
-				<key>ID</key>
-				<integer>65</integer>
+				<integer>79</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -165,7 +95,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{485, 86}, {188, 14}}</string>
+					<string>{{301.5, 818}, {164.5, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -173,7 +103,7 @@
 					<key>Flow</key>
 					<string>Resize</string>
 					<key>ID</key>
-					<integer>72</integer>
+					<integer>89</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -192,7 +122,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs24 \cf0 CamperCabinAssignments}</string>
+\f0\b\fs24 \cf0 Users}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -201,7 +131,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{485, 100}, {188, 28}}</string>
+					<string>{{301.5, 832}, {164.5, 28}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -209,7 +139,292 @@
 					<key>Flow</key>
 					<string>Resize</string>
 					<key>ID</key>
-					<integer>73</integer>
+					<integer>90</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>GradientCenter</key>
+							<string>{-0.29411799999999999, -0.264706}</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs24 \cf0 email : string\
+encrypted_password : string}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>TextPlacement</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>GridH</key>
+			<array>
+				<integer>89</integer>
+				<integer>90</integer>
+				<array/>
+			</array>
+			<key>ID</key>
+			<integer>88</integer>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>58</integer>
+			</dict>
+			<key>ID</key>
+			<integer>87</integer>
+			<key>Points</key>
+			<array>
+				<string>{572.11528089741421, 691.70759951603554}</string>
+				<string>{709.59441200203025, 592.59489148846046}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>StickArrow</string>
+					<key>Legacy</key>
+					<true/>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>TailArrow</key>
+					<string>DoubleStickArrow</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>84</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>84</integer>
+			</dict>
+			<key>ID</key>
+			<integer>86</integer>
+			<key>Points</key>
+			<array>
+				<string>{421.72778974962347, 646.17622403498297}</string>
+				<string>{542.93291045785952, 691.82387978908378}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>DoubleStickArrow</string>
+					<key>Legacy</key>
+					<true/>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>TailArrow</key>
+					<string>StickArrow</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>47</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>TableGroup</string>
+			<key>Graphics</key>
+			<array>
+				<dict>
+					<key>Bounds</key>
+					<string>{{449.5, 692}, {225, 14}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>Vertical</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>ID</key>
+					<integer>84</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>GradientCenter</key>
+							<string>{-0.29411799999999999, -0.264706}</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f0\b\fs24 \cf0 CamperDiscounts}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>TextPlacement</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{449.5, 706}, {225, 28}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>Vertical</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>ID</key>
+					<integer>85</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>GradientCenter</key>
+							<string>{-0.29411799999999999, -0.264706}</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs24 \cf0 camper_registration_id : integer\
+discount_id : integer}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>TextPlacement</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+			<key>GridH</key>
+			<array>
+				<integer>84</integer>
+				<integer>85</integer>
+				<array/>
+			</array>
+			<key>ID</key>
+			<integer>83</integer>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>79</integer>
+			</dict>
+			<key>ID</key>
+			<integer>82</integer>
+			<key>Points</key>
+			<array>
+				<string>{482.61999362118223, 315.27870443938019}</string>
+				<string>{569.66764054065936, 373.72113207881546}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>StickArrow</string>
+					<key>Legacy</key>
+					<true/>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>TailArrow</key>
+					<string>DoubleStickArrow</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>41</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>TableGroup</string>
+			<key>Graphics</key>
+			<array>
+				<dict>
+					<key>Bounds</key>
+					<string>{{486.5, 374}, {188, 14}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>Vertical</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>ID</key>
+					<integer>79</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>GradientCenter</key>
+							<string>{-0.29411799999999999, -0.264706}</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
+
+\f0\b\fs24 \cf0 CamperSession}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>TextPlacement</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{486.5, 388}, {188, 42}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>Vertical</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>ID</key>
+					<integer>80</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -231,7 +446,8 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
 \f0\fs24 \cf0 camp_session_id : integer\
-}</string>
+camper_registration_id : integer\
+cabin_id : integer}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -241,47 +457,12 @@
 			</array>
 			<key>GridH</key>
 			<array>
-				<integer>72</integer>
-				<integer>73</integer>
+				<integer>79</integer>
+				<integer>80</integer>
 				<array/>
 			</array>
 			<key>ID</key>
-			<integer>71</integer>
-		</dict>
-		<dict>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>41</integer>
-			</dict>
-			<key>ID</key>
-			<integer>70</integer>
-			<key>Points</key>
-			<array>
-				<string>{404.60184144440672, 263.12002388493795}</string>
-				<string>{496.51678959220709, 285.84855996014187}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>StickArrow</string>
-					<key>Legacy</key>
-					<true/>
-					<key>LineType</key>
-					<integer>1</integer>
-					<key>TailArrow</key>
-					<string>0</string>
-				</dict>
-			</dict>
-			<key>Tail</key>
-			<dict>
-				<key>ID</key>
-				<integer>66</integer>
-			</dict>
+			<integer>78</integer>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -290,7 +471,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{258, 434}, {104, 14}}</string>
+					<string>{{551.5, 240}, {104, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -326,7 +507,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{258, 448}, {104, 14}}</string>
+					<string>{{551.5, 254}, {104, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -374,96 +555,6 @@
 		</dict>
 		<dict>
 			<key>Class</key>
-			<string>TableGroup</string>
-			<key>Graphics</key>
-			<array>
-				<dict>
-					<key>Bounds</key>
-					<string>{{269, 221}, {157, 14}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FitText</key>
-					<string>Vertical</string>
-					<key>Flow</key>
-					<string>Resize</string>
-					<key>ID</key>
-					<integer>65</integer>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>GradientCenter</key>
-							<string>{-0.29411799999999999, -0.264706}</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
-
-\f0\b\fs24 \cf0 CabinAssignments}</string>
-						<key>VerticalPad</key>
-						<integer>0</integer>
-					</dict>
-					<key>TextPlacement</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{269, 235}, {157, 28}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FitText</key>
-					<string>Vertical</string>
-					<key>Flow</key>
-					<string>Resize</string>
-					<key>ID</key>
-					<integer>66</integer>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>GradientCenter</key>
-							<string>{-0.29411799999999999, -0.264706}</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
-
-\f0\fs24 \cf0 camp_session_id : integer\
-name : string}</string>
-						<key>VerticalPad</key>
-						<integer>0</integer>
-					</dict>
-					<key>TextPlacement</key>
-					<integer>0</integer>
-				</dict>
-			</array>
-			<key>GridH</key>
-			<array>
-				<integer>65</integer>
-				<integer>66</integer>
-				<array/>
-			</array>
-			<key>ID</key>
-			<integer>64</integer>
-		</dict>
-		<dict>
-			<key>Class</key>
 			<string>LineGraphic</string>
 			<key>Head</key>
 			<dict>
@@ -474,8 +565,8 @@ name : string}</string>
 			<integer>63</integer>
 			<key>Points</key>
 			<array>
-				<string>{639.9292893258787, 477.49497471884877}</string>
-				<string>{621.0707106741213, 609.50502528115123}</string>
+				<string>{337.37518416793392, 508.47653118748065}</string>
+				<string>{363.12261901141005, 589.52350944025511}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -509,8 +600,8 @@ name : string}</string>
 			<integer>62</integer>
 			<key>Points</key>
 			<array>
-				<string>{636.80262018868416, 448.56458707472484}</string>
-				<string>{569.5527696313153, 329.43540874565463}</string>
+				<string>{338.92649054790184, 479.55777448256237}</string>
+				<string>{425.51317960149629, 315.44234904509813}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -544,8 +635,8 @@ name : string}</string>
 			<integer>61</integer>
 			<key>Points</key>
 			<array>
-				<string>{600.36328505026404, 329.25818927290646}</string>
-				<string>{709.57351781537432, 395.11109362446058}</string>
+				<string>{667.62728652584508, 430.11777900807107}</string>
+				<string>{709.5175145604527, 440.27106867777906}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -558,13 +649,13 @@ name : string}</string>
 					<key>LineType</key>
 					<integer>1</integer>
 					<key>TailArrow</key>
-					<string>DoubleStickArrow</string>
+					<string>StickArrow</string>
 				</dict>
 			</dict>
 			<key>Tail</key>
 			<dict>
 				<key>ID</key>
-				<integer>41</integer>
+				<integer>80</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -579,8 +670,8 @@ name : string}</string>
 			<integer>59</integer>
 			<key>Points</key>
 			<array>
-				<string>{1179.8200845781041, 301.25490210389461}</string>
-				<string>{1016.4301465162421, 398.07903997934199}</string>
+				<string>{1077.5000303434454, 487.92042241630259}</string>
+				<string>{1016.4997079823972, 487.24843669171418}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -645,7 +736,7 @@ name : string}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{710, 76}, {306, 826}}</string>
+					<string>{{710, 76}, {306, 812}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -731,8 +822,7 @@ parent_has_signed : boolean\
 camp_check_in_location : string\
 estimated_camp_fee : money\
 deposit_amount : money\
-balance_due : money\
-camp_season_id : integer}</string>
+balance_due : money}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -756,7 +846,7 @@ camp_season_id : integer}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{590, 449}, {102, 14}}</string>
+					<string>{{284, 480}, {102, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -792,7 +882,7 @@ camp_season_id : integer}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{590, 463}, {102, 14}}</string>
+					<string>{{284, 494}, {102, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -845,7 +935,7 @@ camp_season_id : integer}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{552, 610}, {136, 14}}</string>
+					<string>{{291, 590}, {149, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -881,7 +971,7 @@ camp_season_id : integer}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{552, 624}, {136, 42}}</string>
+					<string>{{291, 604}, {149, 42}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -910,9 +1000,9 @@ camp_season_id : integer}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 camp_season_id\
-description\
-amount}</string>
+\f0\fs24 \cf0 camp_season_id : integer\
+description : text\
+amount : money}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -936,7 +1026,7 @@ amount}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{497, 259}, {113, 14}}</string>
+					<string>{{384, 245}, {113, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -972,7 +1062,7 @@ amount}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{497, 273}, {113, 56}}</string>
+					<string>{{384, 259}, {113, 56}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1028,7 +1118,7 @@ age_range : string}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1130, 231}, {195, 14}}</string>
+					<string>{{1078, 447}, {195, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1064,7 +1154,7 @@ age_range : string}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1130, 245}, {195, 56}}</string>
+					<string>{{1078, 461}, {195, 56}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1161,7 +1251,7 @@ dosage : string}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-11-09 13:28:15 +0000</string>
+	<string>2013-11-09 14:33:51 +0000</string>
 	<key>Modifier</key>
 	<string>David Groulx</string>
 	<key>NotesVisible</key>
@@ -1242,7 +1332,7 @@ dosage : string}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{947, 223}, {1319, 1195}}</string>
+		<string>{{1283, 327}, {1226, 1091}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -1256,7 +1346,7 @@ dosage : string}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{237, 0}, {1170, 1041}}</string>
+		<string>{{237, 0}, {1077, 937}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

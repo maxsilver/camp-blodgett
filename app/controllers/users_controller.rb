@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [:show, :edit]
 
   def index
     @users = User.all
@@ -20,6 +20,14 @@ class UsersController < ApplicationController
 
   def update
   end
+
+  def destroy
+    unless User.count <= 1
+      @user.destroy
+    end
+    redirect_to users_path
+  end
+
 
 
   private

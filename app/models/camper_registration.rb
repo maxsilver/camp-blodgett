@@ -1,10 +1,12 @@
 class CamperRegistration < ActiveRecord::Base
-  belongs_to :camp_season
   has_many :medications
   accepts_nested_attributes_for :medications
 
   has_many :camper_sessions
   has_many :camp_sessions, through: :camper_sessions
+
+  has_many :camper_discounts
+  has_many :discounts, through: :camper_discounts
 
   def self.males
     where(gender: 'M')
@@ -16,5 +18,9 @@ class CamperRegistration < ActiveRecord::Base
 
   def self.current_session_campers(year)
     all
+  end
+
+  def season_year
+    camp_sessions.first.camp_season.year
   end
 end
