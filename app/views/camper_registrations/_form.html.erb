@@ -1,0 +1,19 @@
+<%= form_for @camper_registration do |f| %>
+  <%= f.label :last_name, 'Last Name' %>
+  <%= f.text_field :last_name %>
+  <%= f.label :first_name, 'First Name' %>
+  <%= f.text_field :first_name %>
+  <%= f.label :middle_initial, 'Middle Initial' %>
+  <%= f.text_field :middle_initial %>
+  <%= f.label :gender, 'Gender' %>
+  <%= f.select :gender, options_for_select(['Male', 'Female']) %>
+  <%= f.label :address, 'Address' %>
+  <%= f.text_field :address %>
+  <%= f.label :city, 'City' %>
+  <%= f.text_field :city %>
+  <%= f.label :state %>
+  <%= f.select :state, options_for_select(['MI', 'OH', 'HI']) %>
+  <%= f.label :zip, 'Zip' %>
+  <%= f.text_field :zip %>
+  <%= f.submit %>
+<% end %>

@@ -86,6 +86,16 @@ ActiveRecord::Schema.define(version: 20131109001337) do
     t.date     "polio_shot"
     t.date     "hepatitis_b_shot"
     t.boolean  "parent_has_signed"
+    t.integer  "year"
+    t.string   "camp_check_in_location"
+    t.text     "session_numbers"
+    t.integer  "estimated_camp_fee_cents",                 default: 0,     null: false
+    t.string   "estimated_camp_fee_currency",              default: "USD", null: false
+    t.integer  "deposit_amount_cents",                     default: 0,     null: false
+    t.string   "deposit_amount_currency",                  default: "USD", null: false
+    t.integer  "balance_due_cents",                        default: 0,     null: false
+    t.string   "balance_due_currency",                     default: "USD", null: false
+    t.integer  "camp_season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
