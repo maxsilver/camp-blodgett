@@ -18,6 +18,7 @@
       <td><%= session.start_date %></td>
       <td><%= session.end_date %></td>
       <td><%= session.camp_season.year %></td>
+      <td><%= link_to "Cabin Doc", [session, :cabin_assignments] %></td>
     </tr>
     <% end %>
   </tbody>
