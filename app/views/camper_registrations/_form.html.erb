@@ -141,5 +141,14 @@
 <%= medication.text_field :dosage %>
       <% end %>
     </fieldset>
+
+    <fieldset>
+      <legend>Sessions</legend>
+      <%= hidden_field_tag 'camper_registration[camp_session_ids][]', nil %>
+      <% CampSeason.most_recent.camp_sessions.each do |session| %>
+      <%= check_box_tag 'camper_registration[camp_session_ids][]', session.id, @camper_registration.camp_session_ids.include?(session.id), id: dom_id(session) %>
+      <%= label_tag dom_id(session), "Session #{session.number}" %>
+      <% end %>
+      </fieldset>
   <%= f.submit %>
 <% end %>
