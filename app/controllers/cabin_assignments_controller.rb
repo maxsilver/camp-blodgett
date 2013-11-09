@@ -2,7 +2,7 @@ class CabinAssignmentsController < ApplicationController
   before_action :set_camper_session, only: [:update]
 
   def index
-    @camp_sessions = CampSession.all
+    @camp_sessions = CampSession.order([:camp_season_id, :id]).all
   end
 
   def show

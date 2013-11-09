@@ -32,7 +32,7 @@
 </table>
 <% end %>
 
-<% @camp_session.cabins.uniq.each do |cabin| %>
+<% @camp_session.cabins.order(:id).uniq.each do |cabin| %>
 <header>
   <h1>Cabin Assignments</h1>
   <h2>
@@ -70,5 +70,4 @@
     <% end %>
   </table>
 </div>
-<hr />
 <% end %>
