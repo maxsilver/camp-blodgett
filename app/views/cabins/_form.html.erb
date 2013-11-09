@@ -1,6 +1,8 @@
 <%= form_for @cabin do |f| %>
-<%= render partial: 'common/errors', locals: {record: @cabin} %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.submit %>
+  <%= render partial: 'common/errors', locals: {record: @cabin} %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
 <% end %>
