@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'carmen'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'money-rails'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'debugger'
