@@ -1,0 +1,19 @@
+<h1>Camp Seasons</h1>
+
+<%= link_to 'New Camp Season', new_camp_season_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th></th>
+  </thead>
+  <tbody>
+    <% @camp_seasons.each do |camp_season| %>
+    <tr>
+      <td><%= link_to camp_season.year, camp_season_path(camp_season) %></td>
+      <td></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

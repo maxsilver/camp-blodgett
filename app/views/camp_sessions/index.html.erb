@@ -1,0 +1,24 @@
+<h1>Camp Sessions</h1>
+
+<%= link_to 'New Camp Session', new_camp_session_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td>Number</td>
+      <td>Start Date</td>
+      <td>End Date</td>
+      <td>Season</td>
+      </tr>
+  </thead>
+  <tbody>
+    <% @camp_sessions.each do |session| %>
+    <tr>
+      <td><%= session.number %></td>
+      <td><%= session.start_date %></td>
+      <td><%= session.end_date %></td>
+      <td><%= session.camp_season.year %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

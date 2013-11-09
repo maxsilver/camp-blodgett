@@ -1,0 +1,15 @@
+<% @cabins.each do |cabin| %>
+<div id="cabin_<%= cabin.id %>" class="cabin">
+  <h1>Cabin <%= cabin.name %></h1>
+  <table>
+    <% cabin.kids.each do |kid| %>
+    <tr id="kid_<%= kid.id %>" class="kid">
+      <td class="name"><%= kid.first_name %></td>
+      <td class="sex"><%= kid.gender %></td>
+      <td class="age"><%= kid.age_at_start_of_camp %></td>
+      <td class="move"></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+<% end %>

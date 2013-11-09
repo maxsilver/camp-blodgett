@@ -1,0 +1,143 @@
+<%= form_for @camper_registration do |f| %>
+<%= render partial: 'common/errors', locals: {record: @camper_registration} %>
+  <fieldset>
+    <legend>Camper Info</legend>
+    <%= f.label :new_camper, 'New Camper?' %>
+    <%= f.select :new_camper, options_for_select(['Yes', 'No']) %>
+    <%= f.label :how_did_you_hear_about_us, 'If new, how did you hear about us?' %>
+    <%= f.text_field :how_did_you_hear_about_us %>
+    <%= f.label :last_name, 'Last Name' %>
+    <%= f.text_field :last_name %>
+    <%= f.label :first_name, 'First Name' %>
+    <%= f.text_field :first_name %>
+    <%= f.label :middle_initial, 'Middle Initial' %>
+    <%= f.text_field :middle_initial %>
+    <%= f.label :gender, 'Gender' %>
+    <%= f.select :gender, options_for_select(['Male', 'Female']), include_blank: '--- Select One ---' %>
+    <%= f.label :address, 'Address' %>
+    <%= f.text_field :address %>
+    <%= f.label :city, 'City' %>
+    <%= f.text_field :city %>
+    <%= f.label :state %>
+    <%= f.select :state, options_for_select(Carmen::Country.coded('US').subregions.map {|state| [state.name, state.code]}, 'MI') %>
+    <%= f.label :zip, 'Zip' %>
+    <%= f.text_field :zip %>
+    <%= f.label :birth_date, 'Birth Date' %>
+    <%= f.date_field :birth_date %>
+    <%= f.label :age_at_start_of_camp, 'Age at Start of Camp' %>
+    <%= f.text_field :age_at_start_of_camp %>
+    <%= f.label :grade_next_year, 'Grade Next Year' %>
+    <%= f.text_field :grade_next_year %>
+    <%= f.label :school, 'School' %>
+    <%= f.text_field :school %>
+    <%= f.label :adult_shirt_size, 'Adult Shirt Size' %>
+    <%= f.select :adult_shirt_size, options_for_select(['S', 'M', 'L', 'XL']), include_blank: '--- Select one ---' %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Parent/Guardian Info</legend>
+    <%= f.label :parent_or_guardian_name, 'Parent/Guardian Name' %>
+    <%= f.text_field :parent_or_guardian_name %>
+    <%= f.label :parent_or_guardian_relationship, 'Relationship' %>
+    <%= f.text_field :parent_or_guardian_relationship %>
+    <%= f.label :parent_or_guardian_home_phone, 'Home Phone' %>
+    <%= f.telephone_field :parent_or_guardian_home_phone %>
+    <%= f.label :parent_or_guardian_cell_phone, 'Cell Phone' %>
+    <%= f.telephone_field :parent_or_guardian_cell_phone %>
+    <%= f.label :parent_or_guardian_employer, 'Cell Phone' %>
+    <%= f.text_field :parent_or_guardian_employer %>
+    <%= f.label :parent_or_guardian_work_phone, 'Work Phone' %>
+    <%= f.telephone_field :parent_or_guardian_work_phone %>
+    <%= f.label :parent_or_guardian_email, 'Email' %>
+    <%= f.text_field :parent_or_guardian_email %>
+    <p>If you are unable to pick your child up aftere camp, please give the names of two adults who have permission to do so:</p>
+    <%= f.label :parent_or_guardian_allow_pickup_name_1, 'Name' %>
+    <%= f.text_field :parent_or_guardian_allow_pickup_name_1 %>
+    <%= f.label :parent_or_guardian_allow_pickup_phone_1, 'Phone' %>
+    <%= f.telephone_field :parent_or_guardian_allow_pickup_phone_1 %>
+    <%= f.label :parent_or_guardian_allow_pickup_name_2, 'Name' %>
+    <%= f.text_field :parent_or_guardian_allow_pickup_name_2 %>
+    <%= f.label :parent_or_guardian_allow_pickup_phone_2, 'Phone' %>
+    <%= f.telephone_field :parent_or_guardian_allow_pickup_phone_2 %>
+  </fieldset>
+  <fieldset>
+    <legend>Emergency/Health Info</legend>
+    <%= f.label :emergency_contact_name, 'Emergency Contact' %>
+    <%= f.text_field :emergency_contact_name %>
+    <%= f.label :emergency_contact_phone, 'Phone' %>
+    <%= f.telephone_field :emergency_contact_phone %>
+    <%= f.label :emergency_contact_doctor, 'Doctor' %>
+    <%= f.text_field :emergency_contact_doctor %>
+    <%= f.label :emergency_contact_doctor_phone, 'Phone' %>
+    <%= f.telephone_field :emergency_contact_doctor_phone %>
+    <%= f.label :health_insurance, 'Name of Health Insurance' %>
+    <%= f.text_field :health_insurance %>
+    <%= f.label :health_insurance_policyholder_name, "Policyholder's name" %>
+    <%= f.text_field :health_insurance_policyholder_name %>
+    <%= f.label :health_insurance_policy_number, "Policy #" %>
+    <%= f.text_field :health_insurance_policy_number %>
+    <%= f.label :health_insurance_group_number, "Group #" %>
+    <%= f.text_field :health_insurance_group_number %>
+    <p>Has the camper been diagnosed with or currently receiving treatment for any of the following?</p>
+    <%= f.check_box :hay_fever_asthma_respiratory_conditions %>
+    <%= f.label :hay_fever_asthma_respiratory_conditions, "Hay fever/asthma/respiratory conditions" %>
+    <%= f.check_box :diabetes %>
+    <%= f.label :diabetes, "Diabetes" %>
+    <%= f.check_box :eczema_skin_rashes %>
+    <%= f.label :eczema_skin_rashes, "Eczema/skin rashes" %>
+    <%= f.check_box :heart_conditions %>
+    <%= f.label :heart_conditions, "Heart Conditions" %>
+    <%= f.check_box :bedwetting %>
+    <%= f.label :bedwetting, "Bedwetting" %>
+    <%= f.check_box :colds_sore_throats_earaches %>
+    <%= f.label :colds_sore_throats_earaches, "Colds/soar throats/earaches" %>
+    <%= f.check_box :adhd_odd_ocd %>
+    <%= f.label :adhd_odd_ocd, "ADHD/ODD/OCD" %>
+    <%= f.check_box :convulsions_seizures %>
+    <%= f.label :convulsions_seizures, "Convulsions/seizures" %>
+    <%= f.check_box :shortness_of_breath %>
+    <%= f.label :shortness_of_breath, "Shortness of breath" %>
+    <%= f.check_box :aspergers_autism %>
+    <%= f.label :aspergers_autism, "Aspergers/Autism" %>
+    <%= f.label :other_health_info, "Other" %>
+    <%= f.text_field :other_health_info %>
+    <%= f.label :previous_health_history, "List any previous operations, injuries or physical limitations that may restrict the campers activity" %>
+    <%= f.text_field :previous_health_history %>
+    <%= f.label :has_infectious_disease, "Does the camper have any infectious disease?" %>
+    <%= f.select :has_infectious_disease, options_for_select(['Yes', 'No']), include_blank: '--- Select One ---' %>
+
+    <%= f.label :has_infectious_disease_explanation, "If yes, explain" %>
+    <%= f.text_field :has_infectious_disease_explanation %>
+
+    <%= f.label :known_allergies, "List any known allergies or dietary restrictions (please include the typical reaction and treatment)" %>
+    <%= f.text_field :known_allergies %>
+    </fieldset>
+    <fieldset>
+      <legend>Immunizations</legend>
+      <p>(list latest date)</p>
+    <%= f.label :immunization_up_to_date, "Up to Date" %>
+    <%= f.select :immunization_up_to_date, options_for_select(['Yes', 'No']), include_blank: '--- Select One---' %>
+    <%= f.label :tetanus_booster_shot, "Tetanus booster" %>
+    <%= f.date_field :tetanus_booster_shot %>
+    <%= f.label :measles_mumps_shot, "Measles/Mumps" %>
+    <%= f.date_field :measles_mumps_shot %>
+    <%= f.label :polio_shot, "Polio" %>
+    <%= f.date_field :polio_shot %>
+    <%= f.label :hepatitis_b_shot, "Hepatitis B" %>
+    <%= f.date_field :hepatitis_b_shot %>
+    <p>Or attach a copy of immunization record. ;^)</p>
+    </fieldset>
+    <fieldset>
+      <legend>Medications</legend>
+      <p>PROVIDE LIST OF MEDICATIONS/FREQUENCIES/DOSAGES HERE</p>
+      <%= f.fields_for :medications do |medication| %>
+      <%= medication.label :name %>
+      <%= medication.text_field :name %>
+<%= medication.label :frequency %>
+<%= medication.text_field :frequency %>
+<%= medication.label :dosage %>
+<%= medication.text_field :dosage %>
+      <% end %>
+    </fieldset>
+  <%= f.submit %>
+<% end %>
