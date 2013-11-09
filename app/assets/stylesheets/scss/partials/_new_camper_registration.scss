@@ -1,0 +1,66 @@
+.new_camper_registration {
+
+  label,
+  p {
+    @include span-columns(12 omega,12)
+  }
+
+  p {
+    color: $red;
+    margin-top: 1em;
+  }
+
+  input,
+  select {
+    margin-bottom: 1em;
+    @include span-columns(6, 12);
+  }
+
+  input[type="checkbox"],
+  .checkbox-label {
+    width: auto;
+    float: none;
+  }
+
+
+
+  fieldset {
+    @include clearfix();
+    margin: 2em 0;
+    @include span-columns(12 omega, 12);
+  }
+
+  legend {
+    border-bottom: 5px solid $dirty-yellow;
+    @include clearfix();
+
+    h3 {
+      float: left;
+      @include border-top-radius($border-radius-large);
+      @include background(linear-gradient(top, lighten($yellow, 10%), $yellow));
+      color: $blue;
+      padding: .5em;
+      margin: 0;
+    }
+  }
+  .create-camper {
+    @include push(3);
+  }
+
+  .remove_fields {
+    @extend .red-button;
+    @extend .button;
+    float: left;
+    height: auto;
+    padding: 6px;
+  }
+
+  .add_fields {
+    @extend .blue-button;
+    @extend .button;
+    height: auto;
+    padding: 6px;
+    float: left;
+  }
+
+}

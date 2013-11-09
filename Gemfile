@@ -10,10 +10,6 @@ gem 'compass-rails', "~> 2.0.alpha.0"
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
-group :assets do
-end
-
-
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
@@ -26,6 +22,10 @@ gem "devise", "~> 3.2.0"
 
 group :development, :test do
   gem 'debugger'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :doc do

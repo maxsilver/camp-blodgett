@@ -34,7 +34,7 @@
 
 <% @camp_session.cabins.order(:id).uniq.each do |cabin| %>
 <header>
-  <h1>Cabin Assignments</h1>
+  <h1>Cabin Doc</h1>
   <h2>
     <%= @camp_season.year %> Session <%= @camp_session.number %>
     <small>(<%= @camp_session.start_date %>)</small>
@@ -42,7 +42,7 @@
 </header>
 
 <div id="cabin_<%= cabin.id %>" class="cabin" data-cabin-id="<%= cabin.id %>">
-  <h3 class="cabin-name"><%= cabin.name %></h3>
+  <h3 class="cabin-name" contenteditable><%= cabin.name %></h3>
   <table>
     <thead>
       <tr>

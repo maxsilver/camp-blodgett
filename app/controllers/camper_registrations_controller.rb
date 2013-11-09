@@ -1,5 +1,5 @@
 class CamperRegistrationsController < ApplicationController
-  before_action :set_camper_registration, only: [:show, :edit, :update]
+  before_action :set_camper_registration, only: [:show, :edit, :update, :add_medication]
 
   def index
     params[:camp_season] ||= CampSeason.most_recent_year
@@ -38,6 +38,11 @@ class CamperRegistrationsController < ApplicationController
     else
       render action: 'edit'
     end
+  end
+
+  def add_medication
+    @camper_registration.medications.build
+    render 'edit'
   end
 
 
