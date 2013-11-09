@@ -15,7 +15,9 @@ class CamperRegistration < ActiveRecord::Base
   validates :city, presence: true
   validates :state, presence: true
   validates :zip, presence: true
-
+  validates :adult_shirt_size, presence: true
+  validates :has_infectious_disease, presence: true
+  validates :immunization_up_to_date, presence: true
 
   def self.males
     where(gender: 'M')
