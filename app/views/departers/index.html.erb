@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Bus</th>
+      <th>Gender</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @departers.each do |departer| %>
+      <tr>
+        <td></td>
+        <td><%= departer.gender %></td>
+        <td><%= departer.last_name %></td>
+        <td><%= departer.first_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
