@@ -5,9 +5,8 @@ CampBlodgett::Application.routes.draw do
 
   resources :users
 
-  resources :camp_seasons, except: [:destroy] do
-    resources :camp_sessions, except: [:destroy]
-  end
+  resources :camp_seasons, except: [:destroy]
+  resources :camp_sessions, except: [:destroy]
   resources :cabin_assignments, except: [:destroy]
   resources :cabins, except: [:destroy]
   resources :camper_registrations, except: [:destroy]

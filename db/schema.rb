@@ -42,9 +42,12 @@ ActiveRecord::Schema.define(version: 20131109034622) do
     t.date     "start_date"
     t.date     "end_date"
     t.string   "age_range"
+    t.integer  "camp_season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "camp_sessions", ["camp_season_id"], name: "index_camp_sessions_on_camp_season_id", using: :btree
 
   create_table "camper_cabin_assignments", force: true do |t|
     t.integer  "cabin_assignemnt_id"
@@ -122,6 +125,8 @@ ActiveRecord::Schema.define(version: 20131109034622) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "camper_registrations", ["camp_season_id"], name: "index_camper_registrations_on_camp_season_id", using: :btree
 
   create_table "discounts", force: true do |t|
     t.text     "description"
