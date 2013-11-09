@@ -16,10 +16,6 @@ class CamperRegistration < ActiveRecord::Base
     where(gender: 'F')
   end
 
-  def self.current_session_campers(year)
-    all
-  end
-
   def season_year
     camp_sessions.first.camp_season.year
   end
