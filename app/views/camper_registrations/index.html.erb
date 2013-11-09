@@ -4,7 +4,7 @@
 
 <%= form_tag camper_registrations_path, method: :get do %>
 <%= label_tag :camp_season, 'Season' %>
-<%= select_tag :camp_season, options_from_collection_for_select(CampSeason.all, :year, :year, params[:camp_season]) %>
+<%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, params[:camp_season]) %>
 <% end %>
 
 <table>
