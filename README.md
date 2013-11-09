@@ -50,7 +50,7 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 
 # Seed some test data for development use (Optional)
-bundle exec rake db:seed
+bundle exec rake db:development:populate
 
 # Start the server
 bundle exec rails server -p 3001
