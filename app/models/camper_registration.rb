@@ -1,5 +1,7 @@
 class CamperRegistration < ActiveRecord::Base
   has_many :medications
+  accepts_nested_attributes_for :medications
+
   has_many :camp_sessions
 
   validates :last_name, presence: true

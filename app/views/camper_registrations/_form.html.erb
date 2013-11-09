@@ -129,6 +129,14 @@
     <fieldset>
       <legend>Medications</legend>
       <p>PROVIDE LIST OF MEDICATIONS/FREQUENCIES/DOSAGES HERE</p>
+      <%= f.fields_for :medications do |medication| %>
+      <%= medication.label :name %>
+      <%= medication.text_field :name %>
+<%= medication.label :frequency %>
+<%= medication.text_field :frequency %>
+<%= medication.label :dosage %>
+<%= medication.text_field :dosage %>
+      <% end %>
     </fieldset>
   <%= f.submit %>
 <% end %>

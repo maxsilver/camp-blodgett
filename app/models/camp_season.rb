@@ -3,5 +3,5 @@ class CampSeason < ActiveRecord::Base
   has_many :discounts
   has_many :camp_sessions
 
-  validates :year, presence: true
+  validates :year, presence: true, uniqueness: true
 end
