@@ -1,7 +1,6 @@
 CampBlodgett::Application.routes.draw do
 
   devise_for :users
-  resources :camper_registrations
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -57,4 +56,10 @@ CampBlodgett::Application.routes.draw do
   #     resources :products
   #   end
 
+  resources :reports
+  resources :camp_seasons, except: [:destroy]
+  resources :cabin_assignments, except: [:destroy]
+  resources :cabins, except: [:destroy]
+  resources :sessions, except: [:destroy]
+  resources :camper_registrations, except: [:destroy]
 end

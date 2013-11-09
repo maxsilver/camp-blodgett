@@ -10,6 +10,7 @@ class CamperRegistrationsController < ApplicationController
 
   def new
     @camper_registration = CamperRegistration.new
+    3.times { @camper_registration.medications.build }
   end
 
   def edit
@@ -38,5 +39,9 @@ class CamperRegistrationsController < ApplicationController
   def set_camper_registration
     @camper_registration = CamperRegistration.find(params[:id])
   end
-  
+
+  def camper_registration_params
+    params.require(:camper_registration).permit!
+  end
+
 end
