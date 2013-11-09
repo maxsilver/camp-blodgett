@@ -133,8 +133,13 @@
 			<integer>61</integer>
 			<key>Points</key>
 			<array>
+<<<<<<< HEAD
 				<string>{118.89696554726738, 256.30961936568229}</string>
 				<string>{182.61047405336978, 306.55635044062194}</string>
+=======
+				<string>{111.35863496246633, 256.35352150804835}</string>
+				<string>{182.64892586004086, 327.63095777938889}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 			</array>
 			<key>Style</key>
 			<dict>
@@ -168,8 +173,13 @@
 			<integer>59</integer>
 			<key>Points</key>
 			<array>
+<<<<<<< HEAD
 				<string>{451.77797723559968, 249.42091610268409}</string>
 				<string>{336, 430}</string>
+=======
+				<string>{436.36048821706146, 249.32202807063916}</string>
+				<string>{398.28468914427617, 281.37908814659363}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 			</array>
 			<key>Style</key>
 			<dict>
@@ -198,7 +208,11 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
+<<<<<<< HEAD
 					<string>{{183, 157}, {306, 14}}</string>
+=======
+					<string>{{183, 157}, {215, 14}}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -234,7 +248,11 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
+<<<<<<< HEAD
 					<string>{{183, 171}, {306, 518}}</string>
+=======
+					<string>{{183, 171}, {215, 532}}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -296,10 +314,14 @@ health_insurance_policyholder_name\
 health_inusrance_policy_number\
 health_insurance_group_number\
 no_health_insurance\
+<<<<<<< HEAD
 hay_fever_asthma_respiratory_conditions\
 diabetes\
 eczema_skin_rashes\
 hea}</string>
+=======
+hay_fea}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -728,7 +750,11 @@ dosage}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
+<<<<<<< HEAD
 	<string>2013-11-09 00:38:32 +0000</string>
+=======
+	<string>2013-11-09 00:34:59 +0000</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 	<key>Modifier</key>
 	<string>David Groulx</string>
 	<key>NotesVisible</key>
@@ -809,7 +835,11 @@ dosage}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
+<<<<<<< HEAD
 		<string>{{899, 516}, {750, 902}}</string>
+=======
+		<string>{{960, 514}, {967, 904}}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -823,7 +853,11 @@ dosage}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
+<<<<<<< HEAD
 		<string>{{-20, -15}, {615, 763}}</string>
+=======
+		<string>{{-128, -16}, {832, 765}}</string>
+>>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
