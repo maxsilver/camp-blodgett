@@ -20,11 +20,10 @@
 // Vendor
 @import "fullcalendar";
 
-@import "shared";
-
 // Pages
 @import "cabin_assignments/show";
 @import "partials/new_camper_registration";
+@import "cabins/cabins";
 
 // Utilities go last in case over-rides are needed
 @import "partials/utilities";
