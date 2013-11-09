@@ -49,7 +49,7 @@ class CamperRegistration < ActiveRecord::Base
   validates :other_health_info, presence: true
   validates :previous_health_history, presence: true
   validates :has_infectious_disease, presence: true
-  validates :has_infection_disease_explanation, presence: true
+  validates :has_infectious_disease_explanation, presence: true
   validates :known_allergies, presence: true
   validates :immunization_up_to_date, presence: true
   validates :tetanus_booster_shot, presence: true
@@ -58,7 +58,4 @@ class CamperRegistration < ActiveRecord::Base
   validates :hepatitis_b_shot, presence: true
   validates :parent_has_signed, presence: true
   validates :camp_check_in_location, presence: true
-  validates :estimated_camp_fee, presence: true
-  validates :deposit_amount, presence: true
-  validates :balance_due, presence: true
 end
