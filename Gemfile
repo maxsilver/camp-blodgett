@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'money-rails'
+gem "devise", "~> 3.2.0"
 
 group :development, :test do
   gem 'debugger'
