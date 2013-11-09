@@ -1,14 +1,36 @@
-<h1>Cabin Assignments for <%= @camp_season.year %> Session <%= @camp_session.number %></h1>
+<h1>Cabin Assignments</h1>
+<h2>
+  <%= @camp_season.year %> Session <%= @camp_session.number %>
+  <small>(<%= @camp_session.start_date %>)</small>
+</h2>
 
 <% @camp_session.cabins.uniq.each do |cabin| %>
 
 <div id="cabin_<%= cabin.id %>" class="cabin">
-  <h2 class="cabin-name"><%= cabin.name %></h2>
+  <h3 class="cabin-name"><%= cabin.name %></h3>
   <table>
+    <thead>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Middle</th>
+        <th>Gender</th>
+        <th>Birthday</th>
+        <th>Grade in Fall</th>
+        <th>T-Shirt</th>
+        <th>Age</th>
+        <th>Move</th>
+      </tr>
+    </thead>
     <% CamperSession.kids(@camp_session, cabin).each do |cs| %>
     <tr id="kid_<%= cs.camper_registration.id %>" class="kid">
-      <td class="name"><%= cs.camper_registration.first_name %></td>
+      <td class="first-name"><%= cs.camper_registration.first_name %></td>
+      <td class="last-name"><%= cs.camper_registration.last_name %></td>
+      <td class="middle-initial"><%= cs.camper_registration.middle_initial %></td>
       <td class="sex"><%= cs.camper_registration.gender %></td>
+      <th class="birthday"><%= cs.camper_registration.birth_date %></th>
+      <th class="grade-next-year"><%= cs.camper_registration.grade_next_year %></th>
+      <th class="adult-shirt-size"><%= cs.camper_registration.adult_shirt_size %></th>
       <td class="age"><%= cs.camper_registration.age_at_start_of_camp %></td>
       <td class="move"></td>
     </tr>
