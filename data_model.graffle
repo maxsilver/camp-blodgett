@@ -10,11 +10,11 @@
 		<string>139.18</string>
 	</array>
 	<key>AutoAdjust</key>
-	<true/>
+	<false/>
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {576, 733}}</string>
+		<string>{{0, 0}, {870, 1056}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -37,6 +37,8 @@
 	<integer>0</integer>
 	<key>CanvasOrigin</key>
 	<string>{0, 0}</string>
+	<key>CanvasSize</key>
+	<string>{870, 1056}</string>
 	<key>ColumnAlign</key>
 	<integer>1</integer>
 	<key>ColumnSpacing</key>
@@ -133,13 +135,8 @@
 			<integer>61</integer>
 			<key>Points</key>
 			<array>
-<<<<<<< HEAD
-				<string>{118.89696554726738, 256.30961936568229}</string>
-				<string>{182.61047405336978, 306.55635044062194}</string>
-=======
-				<string>{111.35863496246633, 256.35352150804835}</string>
-				<string>{182.64892586004086, 327.63095777938889}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+				<string>{115.53709528131711, 256.32832157246247}</string>
+				<string>{172.6234260161032, 306.0303592148806}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -173,13 +170,8 @@
 			<integer>59</integer>
 			<key>Points</key>
 			<array>
-<<<<<<< HEAD
-				<string>{451.77797723559968, 249.42091610268409}</string>
-				<string>{336, 430}</string>
-=======
-				<string>{436.36048821706146, 249.32202807063916}</string>
-				<string>{398.28468914427617, 281.37908814659363}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+				<string>{523.39427286480804, 310.27648755679292}</string>
+				<string>{479.41820285120269, 339.46244165612467}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -208,11 +200,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-<<<<<<< HEAD
-					<string>{{183, 157}, {306, 14}}</string>
-=======
-					<string>{{183, 157}, {215, 14}}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+					<string>{{173, 13}, {306, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -248,11 +236,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-<<<<<<< HEAD
-					<string>{{183, 171}, {306, 518}}</string>
-=======
-					<string>{{183, 171}, {215, 532}}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+					<string>{{173, 27}, {306, 826}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -281,47 +265,65 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 last_name\
-first_name\
-middle_initial\
-gender\
-address\
-city\
-state\
-zip\
-birth_date\
-age_at_start_of_camp\
-grade_next_year\
-school\
-adult_shirt_size\
-parent_or_guardian_name\
-parent_or_guardian_relationship\
-parent_or_guardian_home_phone\
-parent_or_guardian_cell_phone\
-parent_or_guardian_employer\
-parent_or_guardian_work_phone\
-parent_or_guardian_email\
-parent_or_guardian_allow_pickup_name_1\
-parent_or_guardian_allow_pickup_phone_1\
-parent_or_guardian_allow_pickup_name_2\
-parent_or_guardian_allow_pickup_phone_2\
-emergency_contact_name\
-emergency_contact_phone\
-emergency_contact_doctor\
-emergencyh_contact_doctor_phone\
-health_insurance\
-health_insurance_policyholder_name\
-health_inusrance_policy_number\
-health_insurance_group_number\
-no_health_insurance\
-<<<<<<< HEAD
+\f0\fs24 \cf0 last_name : string\
+first_name : string\
+middle_initial : string\
+gender : string\
+address : string\
+city : string\
+state : string\
+zip : string\
+birth_date : date\
+age_at_start_of_camp : integer\
+grade_next_year : integer\
+school : string\
+adult_shirt_size : string\
+parent_or_guardian_name : string\
+parent_or_guardian_relationship : string\
+parent_or_guardian_home_phone : string\
+parent_or_guardian_cell_phone : string\
+parent_or_guardian_employer : string\
+parent_or_guardian_work_phone : string\
+parent_or_guardian_email : string\
+parent_or_guardian_allow_pickup_name_1 : string\
+parent_or_guardian_allow_pickup_phone_1 : string\
+parent_or_guardian_allow_pickup_name_2 : string\
+parent_or_guardian_allow_pickup_phone_2 : string\
+emergency_contact_name : string\
+emergency_contact_phone : string\
+emergency_contact_doctor : string\
+emergency_contact_doctor_phone : string\
+health_insurance : string\
+health_insurance_policyholder_name : string\
+health_inusrance_policy_number : string\
+health_insurance_group_number : string\
+no_health_insurance : boolean\
 hay_fever_asthma_respiratory_conditions\
-diabetes\
-eczema_skin_rashes\
-hea}</string>
-=======
-hay_fea}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+diabetes : boolean\
+eczema_skin_rashes : boolean\
+heart_conditions : boolean\
+bedwetting : boolean\
+colds_sore_throats_earaches : boolean\
+adhd_odd_ocd : boolean\
+convulsions_seizures : boolean\
+shortness_of_breath : boolean\
+aspergers_autism : boolean\
+other_health_info : text\
+previous_health_info : text\
+has_infectious_disease : boolean\
+has_infectious_disease_explanation : text\
+known_alergies : text\
+immunization_up_to_date :boolean\
+tetanus_booster_shot : date\
+measles_mumps_shot : date\
+polio_shot : date\
+hepatitis_b_shot :date\
+parent_has_signed : boolean\
+camp_check_in_location : string\
+estimated_camp_fee : money\
+deposit_amount : money\
+balance_due : money\
+camp_season_id : integer (foreign key)}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -617,7 +619,7 @@ age_range}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{399, 179}, {142, 14}}</string>
+					<string>{{495, 240}, {142, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -653,7 +655,7 @@ age_range}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{399, 193}, {142, 56}}</string>
+					<string>{{495, 254}, {142, 56}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -710,7 +712,7 @@ dosage}</string>
 	<key>GuidesVisible</key>
 	<string>YES</string>
 	<key>HPages</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>ImageCounter</key>
 	<integer>1</integer>
 	<key>KeepToScale</key>
@@ -750,11 +752,7 @@ dosage}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-<<<<<<< HEAD
-	<string>2013-11-09 00:38:32 +0000</string>
-=======
-	<string>2013-11-09 00:34:59 +0000</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+	<string>2013-11-09 00:49:09 +0000</string>
 	<key>Modifier</key>
 	<string>David Groulx</string>
 	<key>NotesVisible</key>
@@ -822,7 +820,7 @@ dosage}</string>
 	<key>UseEntirePage</key>
 	<false/>
 	<key>VPages</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
@@ -835,11 +833,7 @@ dosage}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-<<<<<<< HEAD
-		<string>{{899, 516}, {750, 902}}</string>
-=======
-		<string>{{960, 514}, {967, 904}}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+		<string>{{899, 223}, {1004, 1195}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -853,11 +847,7 @@ dosage}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-<<<<<<< HEAD
-		<string>{{-20, -15}, {615, 763}}</string>
-=======
-		<string>{{-128, -16}, {832, 765}}</string>
->>>>>>> 8d886ee8c5b1369e7edc6a20f8f8e3a1fb4a6681
+		<string>{{0, 0}, {869, 1056}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

@@ -55,9 +55,7 @@ class CreateCamperRegistrations < ActiveRecord::Migration
       t.date :polio_shot
       t.date :hepatitis_b_shot
       t.boolean :parent_has_signed
-      t.integer :year
       t.string :camp_check_in_location
-      t.text :session_numbers
       t.money :estimated_camp_fee
       t.money :deposit_amount
       t.money :balance_due
