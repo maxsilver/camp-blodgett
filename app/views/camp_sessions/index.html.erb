@@ -5,11 +5,12 @@
 <table>
   <thead>
     <tr>
-      <td>Number</td>
-      <td>Start Date</td>
-      <td>End Date</td>
-      <td>Season</td>
-      </tr>
+      <th>Number</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Season</th>
+      <th></th>
+    </tr>
   </thead>
   <tbody>
     <% @camp_sessions.each do |session| %>
@@ -19,6 +20,7 @@
       <td><%= session.end_date %></td>
       <td><%= session.camp_season.year %></td>
       <td><%= link_to "Cabin Doc", [session, :cabin_assignments] %></td>
+      <td><%= link_to "Departure Doc", camp_session_departers_path(session) %></td>
     </tr>
     <% end %>
   </tbody>
