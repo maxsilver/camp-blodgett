@@ -46,6 +46,9 @@ bundle install --path vendor/bundle
 # Create the project databases
 bundle exec rake db:create
 
+# Run database migrations
+bundle exec rake db:migrate
+
 # Seed some test data for development use (Optional)
 bundle exec rake db:seed
 
