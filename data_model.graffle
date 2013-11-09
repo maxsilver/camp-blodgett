@@ -63,8 +63,8 @@
 			<integer>63</integer>
 			<key>Points</key>
 			<array>
-				<string>{139.5, 380.00001125206268}</string>
-				<string>{274.5, 380.00001125206268}</string>
+				<string>{93.560981931715787, 387.49914541390751}</string>
+				<string>{83.433045763528327, 560.50083157421273}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -98,8 +98,8 @@
 			<integer>62</integer>
 			<key>Points</key>
 			<array>
-				<string>{93.503084554166136, 372.50109418105268}</string>
-				<string>{83.960770867520608, 228.49890581894735}</string>
+				<string>{93.457023229330133, 372.50130564339582}</string>
+				<string>{85.057331762963202, 256.49870222013186}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -133,8 +133,8 @@
 			<integer>61</integer>
 			<key>Points</key>
 			<array>
-				<string>{128.49332399126288, 206.49035676144081}</string>
-				<string>{182.50679464875438, 197.57428162936105}</string>
+				<string>{118.89696554726738, 256.30961936568229}</string>
+				<string>{182.61047405336978, 306.55635044062194}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -168,8 +168,8 @@
 			<integer>59</integer>
 			<key>Points</key>
 			<array>
-				<string>{398.50762559708323, 208.3689744555837}</string>
-				<string>{333.49391921175368, 196.88257757831371}</string>
+				<string>{451.77797723559968, 249.42091610268409}</string>
+				<string>{336, 430}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -198,7 +198,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{183, 157}, {150, 14}}</string>
+					<string>{{183, 157}, {306, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -234,7 +234,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{183, 171}, {150, 28}}</string>
+					<string>{{183, 171}, {306, 518}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -263,8 +263,43 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 \
-tons of fields}</string>
+\f0\fs24 \cf0 last_name\
+first_name\
+middle_initial\
+gender\
+address\
+city\
+state\
+zip\
+birth_date\
+age_at_start_of_camp\
+grade_next_year\
+school\
+adult_shirt_size\
+parent_or_guardian_name\
+parent_or_guardian_relationship\
+parent_or_guardian_home_phone\
+parent_or_guardian_cell_phone\
+parent_or_guardian_employer\
+parent_or_guardian_work_phone\
+parent_or_guardian_email\
+parent_or_guardian_allow_pickup_name_1\
+parent_or_guardian_allow_pickup_phone_1\
+parent_or_guardian_allow_pickup_name_2\
+parent_or_guardian_allow_pickup_phone_2\
+emergency_contact_name\
+emergency_contact_phone\
+emergency_contact_doctor\
+emergencyh_contact_doctor_phone\
+health_insurance\
+health_insurance_policyholder_name\
+health_inusrance_policy_number\
+health_insurance_group_number\
+no_health_insurance\
+hay_fever_asthma_respiratory_conditions\
+diabetes\
+eczema_skin_rashes\
+hea}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -377,7 +412,7 @@ tons of fields}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{275, 373}, {136, 14}}</string>
+					<string>{{15, 561}, {136, 14}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -413,7 +448,7 @@ tons of fields}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{275, 387}, {136, 14}}</string>
+					<string>{{15, 575}, {136, 42}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -442,7 +477,9 @@ tons of fields}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 camp_season_id}</string>
+\f0\fs24 \cf0 camp_season_id\
+description\
+amount}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -502,7 +539,7 @@ tons of fields}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{38, 200}, {90, 28}}</string>
+					<string>{{38, 200}, {90, 56}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -531,8 +568,10 @@ tons of fields}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 Attribute\
-Attribute}</string>
+\f0\fs24 \cf0 number\
+start_date\
+end_date\
+age_range}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -689,7 +728,7 @@ dosage}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-11-09 00:29:26 +0000</string>
+	<string>2013-11-09 00:38:32 +0000</string>
 	<key>Modifier</key>
 	<string>David Groulx</string>
 	<key>NotesVisible</key>
@@ -770,7 +809,7 @@ dosage}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{1077, 286}, {946, 1132}}</string>
+		<string>{{899, 516}, {750, 902}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -784,7 +823,7 @@ dosage}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-118, -130}, {811, 993}}</string>
+		<string>{{-20, -15}, {615, 763}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
