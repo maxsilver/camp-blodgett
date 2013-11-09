@@ -17,7 +17,7 @@ class CampSessionsController < ApplicationController
   def create
     @camp_session = CampSession.new(camp_session_params)
     if @camp_session.save
-      redirect_to @camp_session
+      redirect_to camp_sessions_path
     else
       render action: 'new'
     end
@@ -39,6 +39,6 @@ class CampSessionsController < ApplicationController
   end
 
   def camp_session_params
-    params.require(:camp_session).permit(:start_date, :end_date, :camp_season)
+    params.require(:camp_session).permit(:number, :start_date, :end_date, :camp_season_id)
   end
 end
