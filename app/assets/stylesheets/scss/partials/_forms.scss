@@ -152,7 +152,9 @@ output {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
   padding: .5em;
   @include border-radius($border-radius-small);
   border: 1px solid $input-border;
@@ -170,7 +172,7 @@ textarea.form-control {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: 15px;
+  @include span-columns(12 omega,12);
 }
 
 

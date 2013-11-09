@@ -3,11 +3,7 @@
 <%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, CampSeason.most_recent_year) %>
 <%= render partial: 'common/errors', locals: {record: @camper_registration} %>
 <fieldset>
-  <legend>Camper Info</legend>
-  <%= f.label :new_camper, 'New Camper?' %>
-  <%= f.select :new_camper, options_for_select(['Yes', 'No']) %>
-  <%= f.label :how_did_you_hear_about_us, 'If new, how did you hear about us?' %>
-  <%= f.text_field :how_did_you_hear_about_us %>
+  <legend><h3>Camper Info</h3></legend>
   <%= f.label :last_name, 'Last Name' %>
   <%= f.text_field :last_name %>
   <%= f.label :first_name, 'First Name' %>
@@ -34,10 +30,14 @@
   <%= f.text_field :school %>
   <%= f.label :adult_shirt_size, 'Adult Shirt Size' %>
   <%= f.select :adult_shirt_size, options_for_select(['S', 'M', 'L', 'XL'], @camper_registration.adult_shirt_size), include_blank: '--- Select one ---' %>
+  <%= f.label :new_camper, 'New Camper?' %>
+  <%= f.select :new_camper, options_for_select(['Yes', 'No']) %>
+  <%= f.label :how_did_you_hear_about_us, 'If new, how did you hear about us?' %>
+  <%= f.text_field :how_did_you_hear_about_us %>
 </fieldset>
 
 <fieldset>
-  <legend>Parent/Guardian Info</legend>
+  <legend><h3>Parent/Guardian Info</h3></legend>
   <%= f.label :parent_or_guardian_name, 'Parent/Guardian Name' %>
   <%= f.text_field :parent_or_guardian_name %>
   <%= f.label :parent_or_guardian_relationship, 'Relationship' %>
@@ -52,7 +52,7 @@
   <%= f.telephone_field :parent_or_guardian_work_phone %>
   <%= f.label :parent_or_guardian_email, 'Email' %>
   <%= f.text_field :parent_or_guardian_email %>
-  <p>If you are unable to pick your child up aftere camp, please give the names of two adults who have permission to do so:</p>
+  <p>If you are unable to pick your child up after camp, please give the names of two adults who have permission to do so:</p>
   <%= f.label :parent_or_guardian_allow_pickup_name_1, 'Name' %>
   <%= f.text_field :parent_or_guardian_allow_pickup_name_1 %>
   <%= f.label :parent_or_guardian_allow_pickup_phone_1, 'Phone' %>
@@ -63,7 +63,7 @@
   <%= f.telephone_field :parent_or_guardian_allow_pickup_phone_2 %>
 </fieldset>
 <fieldset>
-  <legend>Emergency/Health Info</legend>
+  <legend><h3>Emergency/Health Info</h3></legend>
   <%= f.label :emergency_contact_name, 'Emergency Contact' %>
   <%= f.text_field :emergency_contact_name %>
   <%= f.label :emergency_contact_phone, 'Phone' %>
@@ -81,26 +81,46 @@
   <%= f.label :health_insurance_group_number, "Group #" %>
   <%= f.text_field :health_insurance_group_number %>
   <p>Has the camper been diagnosed with or currently receiving treatment for any of the following?</p>
-  <%= f.check_box :hay_fever_asthma_respiratory_conditions %>
-  <%= f.label :hay_fever_asthma_respiratory_conditions, "Hay fever/asthma/respiratory conditions" %>
-  <%= f.check_box :diabetes %>
-  <%= f.label :diabetes, "Diabetes" %>
-  <%= f.check_box :eczema_skin_rashes %>
-  <%= f.label :eczema_skin_rashes, "Eczema/skin rashes" %>
-  <%= f.check_box :heart_conditions %>
-  <%= f.label :heart_conditions, "Heart Conditions" %>
-  <%= f.check_box :bedwetting %>
-  <%= f.label :bedwetting, "Bedwetting" %>
-  <%= f.check_box :colds_sore_throats_earaches %>
-  <%= f.label :colds_sore_throats_earaches, "Colds/soar throats/earaches" %>
-  <%= f.check_box :adhd_odd_ocd %>
-  <%= f.label :adhd_odd_ocd, "ADHD/ODD/OCD" %>
-  <%= f.check_box :convulsions_seizures %>
-  <%= f.label :convulsions_seizures, "Convulsions/seizures" %>
-  <%= f.check_box :shortness_of_breath %>
-  <%= f.label :shortness_of_breath, "Shortness of breath" %>
-  <%= f.check_box :aspergers_autism %>
-  <%= f.label :aspergers_autism, "Aspergers/Autism" %>
+  <div class="form-group">
+    <%= f.check_box :hay_fever_asthma_respiratory_conditions %>
+    <%= f.label :hay_fever_asthma_respiratory_conditions, "Hay fever/asthma/respiratory conditions", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :diabetes %>
+    <%= f.label :diabetes, "Diabetes", :class => "checkbox-label"%>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :eczema_skin_rashes %>
+    <%= f.label :eczema_skin_rashes, "Eczema/skin rashes", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :heart_conditions %>
+    <%= f.label :heart_conditions, "Heart Conditions", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :bedwetting %>
+    <%= f.label :bedwetting, "Bedwetting", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :colds_sore_throats_earaches %>
+    <%= f.label :colds_sore_throats_earaches, "Colds/soar throats/earaches", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :adhd_odd_ocd %>
+    <%= f.label :adhd_odd_ocd, "ADHD/ODD/OCD", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :convulsions_seizures %>
+    <%= f.label :convulsions_seizures, "Convulsions/seizures", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :shortness_of_breath %>
+    <%= f.label :shortness_of_breath, "Shortness of breath", :class => "checkbox-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :aspergers_autism %>
+    <%= f.label :aspergers_autism, "Aspergers/Autism", :class => "checkbox-label" %>
+  </div>
   <%= f.label :other_health_info, "Other" %>
   <%= f.text_field :other_health_info %>
   <%= f.label :previous_health_history, "List any previous operations, injuries or physical limitations that may restrict the campers activity" %>
@@ -115,7 +135,7 @@
   <%= f.text_field :known_allergies %>
 </fieldset>
 <fieldset>
-  <legend>Immunizations</legend>
+  <legend><h3>Immunizations</h3></legend>
   <p>(list latest date)</p>
   <%= f.label :immunization_up_to_date, "Up to Date" %>
   <%= f.select :immunization_up_to_date, options_for_select([['Yes', true], ['No', false]], @camper_registration.immunization_up_to_date), include_blank: '--- Select One---' %>
@@ -130,8 +150,8 @@
   <p>Or attach a copy of immunization record. ;^)</p>
 </fieldset>
 <fieldset>
-  <legend>Medications</legend>
-  <p>PROVIDE LIST OF MEDICATIONS/FREQUENCIES/DOSAGES HERE</p>
+  <legend><h3>Medications</h3></legend>
+  <p>Provide List of Medications/Dosages</p>
   <%= f.fields_for :medications do |medication| %>
   <%= medication.label :name %>
   <%= medication.text_field :name %>
@@ -143,11 +163,13 @@
 </fieldset>
 
 <fieldset>
-  <legend>Sessions</legend>
+  <legend><h3>Sessions</h3></legend>
   <%= hidden_field_tag 'camper_registration[camp_session_ids][]', nil %>
   <% CampSeason.most_recent.camp_sessions.each do |session| %>
+  <div class="form-group">
   <%= check_box_tag 'camper_registration[camp_session_ids][]', session.id, @camper_registration.camp_session_ids.include?(session.id), id: dom_id(session) %>
-  <%= label_tag dom_id(session), "Session #{session.number}" %>
+  <%= label_tag dom_id(session), "Session #{session.number}", :class => "checkbox-label" %>
+  </div>
   <% end %>
 </fieldset>
 <%= f.submit %>
