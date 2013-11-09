@@ -17,8 +17,7 @@ class CamperRegistration < ActiveRecord::Base
   end
 
   def self.current_session_campers(year)
-    debugger
-    joins(:camp_sessions => :camp_seasons).where('camp_seasons.year = ?', year)
+    all
   end
 
   def season_year
