@@ -153,13 +153,9 @@
   <legend><h3>Medications</h3></legend>
   <p>Provide List of Medications/Dosages</p>
   <%= f.fields_for :medications do |medication| %>
-  <%= medication.label :name %>
-  <%= medication.text_field :name %>
-  <%= medication.label :frequency %>
-  <%= medication.text_field :frequency %>
-  <%= medication.label :dosage %>
-  <%= medication.text_field :dosage %>
+    <%= render partial: 'medication_fields', locals: {f: medication} %>
   <% end %>
+  <%= link_to_add_fields 'Add Medication', f, :medications %>
 </fieldset>
 
 <fieldset>
