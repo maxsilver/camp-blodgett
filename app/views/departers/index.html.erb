@@ -19,9 +19,9 @@
     <% @departers.each do |departer| %>
       <tr>
         <% if departer.bus_check_box_applies %>
-          <td>[ ]</td>
+          <td><div class="checkbox"></div></td>
         <% else %>
-          <td></td>
+          <td>N/A</td>
         <% end %>
         <td><%= departer.camp_check_in_location %></td>
         <td><%= departer.gender %></td>

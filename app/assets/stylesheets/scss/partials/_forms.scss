@@ -92,6 +92,12 @@ output {
   vertical-align: middle;
 }
 
+// This is a fake "checkbox". 
+.checkbox {
+  border: 1px solid #000;
+  width: 20px;
+  height: 20px;
+}
 
 // Common form controls
 //
