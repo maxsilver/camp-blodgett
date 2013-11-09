@@ -6,7 +6,7 @@
 
 <% @camp_session.cabins.uniq.each do |cabin| %>
 
-<div id="cabin_<%= cabin.id %>" class="cabin">
+<div id="cabin_<%= cabin.id %>" class="cabin" data-cabin-id="<%= cabin.id %>">
   <h3 class="cabin-name"><%= cabin.name %></h3>
   <table>
     <thead>
@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <% CamperSession.kids(@camp_session, cabin).each do |cs| %>
-    <tr id="kid_<%= cs.camper_registration.id %>" class="kid">
+    <tr id="kid_<%= cs.camper_registration.id %>" class="kid" data-camp-session-id="<%= @camp_session.id %>" data-camper-registration-id="<%= cs.camper_registration.id %>">
       <td class="first-name"><%= cs.camper_registration.first_name %></td>
       <td class="last-name"><%= cs.camper_registration.last_name %></td>
       <td class="middle-initial"><%= cs.camper_registration.middle_initial %></td>

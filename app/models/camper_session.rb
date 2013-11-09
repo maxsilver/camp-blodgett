@@ -24,7 +24,7 @@ class CamperSession < ActiveRecord::Base
 
     cabins.each do |c|
       c.kids.each do |kid|
-        camp_session.camper_sessions.create!(cabin_id: c.id, camper_registration_id: kid.id)
+        camp_session.camper_sessions.where(camper_registration_id: kid.id).first.update_column(:cabin_id, c.id)
       end
     end
 

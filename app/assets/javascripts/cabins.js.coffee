@@ -29,19 +29,19 @@ $ ->
       $(kid).find(".move select").val(currentCabin)
 
   moveKid = ->
+    moveTo = $(this).val()
+    kid    = $(this).parents(".kid")
+
     $.ajax(
       type: "POST"
-      url: "/camper_sessions",
+      url: "", # use current url
       dataType: 'json',
       data: 
         _method: 'PUT',
-        camper_registration_id: 1,
-        camp_session_id: 1,
-        camper_session:
-          cabin_id: 1
+        camper_registration_id: kid.data("camper-registration-id"),
+        camp_session_id: kid.data("camp-session-id"),
+        cabin_id: $("##{moveTo}").data("cabin-id")
       success: () ->
-        moveTo = $(this).val()
-        kid    = $(this).parents(".kid")
         $("##{moveTo} table").append(kid)
         updateCabinDropdowns()
     )
