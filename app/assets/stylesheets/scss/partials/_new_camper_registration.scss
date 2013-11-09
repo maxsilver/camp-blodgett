@@ -43,6 +43,24 @@
       margin: 0;
     }
   }
+  .create-camper {
+    @include push(3);
+  }
 
+  .remove_fields {
+    @extend .red-button;
+    @extend .button;
+    float: left;
+    height: auto;
+    padding: 6px;
+  }
+
+  .add_fields {
+    @extend .blue-button;
+    @extend .button;
+    height: auto;
+    padding: 6px;
+    float: left;
+  }
 
 }

@@ -1,5 +1,8 @@
 <%= form_for @camp_session do |f| %>
 <%= render partial: 'common/errors', locals: {record: @camp_session} %>
+<%= f.label :number %>
+<%= f.text_field :number %>
+
 <%= f.label :start_date, 'Start Date' %>
 <%= f.date_select :start_date, {discard_year: true}, {} %>
 <%= f.label :end_date, 'End Date' %>

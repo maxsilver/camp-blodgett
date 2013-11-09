@@ -2,6 +2,12 @@
 
 <%= link_to 'New Camper Registration', new_camper_registration_path %>
 
+<p>
+  Download:
+  <%= link_to "CSV", camper_registrations_path(format: "csv") %> |
+  <%= link_to "Excel", camper_registrations_path(format: "xls") %>
+</p>
+
 <%= form_tag camper_registrations_path, method: :get do %>
 <%= label_tag :camp_season, 'Season' %>
 <%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, params[:camp_season]) %>

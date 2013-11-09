@@ -1,3 +1,15 @@
-body.cabin_assignments header:not(:first-of-type) {
+// Needed to hide headers when viewing doc on the web
+
+.cabin_assignments header:not(:first-of-type) {
   display: none;
+}
+
+.cabin-name {
+  float: left;
+  color: $dirty-yellow;
+}
+
+thead {
+  @include background(linear-gradient(top, lighten($yellow, 10%), $yellow));
+  border-bottom: 3px solid $dirty-yellow;
 }

@@ -8,6 +8,7 @@
 @import "partials/responsive-utilities";
 @import "partials/globals";
 @import "partials/type";
+@import "partials/tables";
 
 // Components
 @import "partials/forms";
@@ -15,6 +16,9 @@
 @import "partials/buttons";
 @import "partials/login";
 @import "partials/nav";
+
+// Vendor
+@import "fullcalendar";
 
 @import "shared";
 

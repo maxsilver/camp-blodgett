@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require fullcalendar.min
+//= require date
 //= require_tree .
 
 var addRemoveNestedFields = function() {
