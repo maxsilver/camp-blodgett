@@ -6,19 +6,9 @@ class CabinAssignmentsController < ApplicationController
   end
 
   def new
-    @camp_season = CampSeason.last
+    @camp_season  = CampSeason.last
     @camp_session = @camp_season.camp_sessions.last
-
-    number_of_cabins = Cabin.count
-    boys             = @camp_session.camper_registrations.males.order('age_at_start_of_camp DESC')
-    girls            = @camp_session.camper_registrations.females.order('age_at_start_of_camp DESC')
-
-    place_holder_cabins = CabinSplitter.new(number_of_cabins, boys, girls).split
-
-    @cabins = []
-    Cabin.all.each do |cabin|
-      @cabins << OpenStruct.new(id: cabin.id, name: cabin.name, kids: place_holder_cabins.shift.compact)
-    end
+    CamperSession.auto_assign(@camp_session) unless @camp_session.camper_registrations.any?
   end
 
   def edit

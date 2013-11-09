@@ -10,4 +10,5 @@ CampBlodgett::Application.routes.draw do
   resources :cabin_assignments, except: [:destroy]
   resources :cabins, except: [:destroy]
   resources :camper_registrations, except: [:destroy]
+  resources :camper_sessions, except: [:destroy]
 end
