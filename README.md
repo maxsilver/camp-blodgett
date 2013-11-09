@@ -14,7 +14,7 @@ As a member of this project, you should have access to the following resources.
 + [**Trello** : https://trello.com/b/VrToIeHr/camper-registration-database](https://trello.com/b/VrToIeHr/camper-registration-database)
 + [**Google Drive** : https://drive.google.com/folderview?id=0B4_qm5HsWutlQXIyOW5rTG4xUlk](https://drive.google.com/folderview?id=0B4_qm5HsWutlQXIyOW5rTG4xUlk)
 
- [**Cabin File Master Photo** : https://raw.github.com/wiki/maxsilver/camp-blodgett/images/cabin-file-master.png](https://raw.github.com/wiki/maxsilver/camp-blodgett/images/cabin-file-master.png)
+ [**Cabin File Master Photo** : https://github.com/maxsilver/camp-blodgett/wiki/images/cabin-file-master.png](https://github.com/maxsilver/camp-blodgett/wiki/images/cabin-file-master.png)
 
 
 
