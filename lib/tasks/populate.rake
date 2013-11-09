@@ -87,7 +87,7 @@ unless Rails.env.production?
             polio_shot: Time.at(rand_in_range(birth_date.to_f, Time.now.to_f)),
             hepatitis_b_shot: Time.at(rand_in_range(birth_date.to_f, Time.now.to_f)),
             parent_has_signed: false,
-            camp_check_in_location: Faker::Address.street_address,
+            camp_check_in_location: %w(GR Camp)[rand(2)],
             estimated_camp_fee_cents: 1000,
             deposit_amount_cents: 1000,
             balance_due_cents: 1000
