@@ -1,4 +1,62 @@
 class CamperRegistration < ActiveRecord::Base
   has_many :medications
-  has_many :camp_sessions  
+  has_many :camp_sessions
+
+  validate :last_name, presence: true
+  validate :first_name, presence: true
+  validate :gender, presence: true
+  validate :address, presence: true
+  validate :city, presence: true
+  validate :state, presence: true
+  validate :zip, presence: true
+  validate :birth_date, presence: true
+  validate :age_at_start_of_camp, presence: true
+  validate :grade_next_year, presence: true
+  validate :school, presence: true
+  validate :adult_shirt_size, presence: true
+  validate :parent_or_guardian_name, presence: true
+  validate :parent_or_guardian_relationship, presence: true
+  validate :parent_or_guardian_home_phone, presence: true
+  validate :parent_or_guardian_cell_phone, presence: true
+  validate :parent_or_guardian_employer, presence: true
+  validate :parent_or_guardian_work_phone, presence: true
+  validate :parent_or_guardian_email, presence: true
+  validate :parent_or_guardian_allow_pickup_name_1, presence: true
+  validate :parent_or_guardian_allow_pickup_phone_1, presence: true
+  validate :parent_or_guardian_allow_pickup_name_2, presence: true
+  validate :parent_or_guardian_allow_pickup_phone_2, presence: true
+  validate :emergency_contact_name, presence: true
+  validate :emergency_contact_phone, presence: true
+  validate :emergency_contact_doctor, presence: true
+  validate :emergency_contact_doctor_phone, presence: true
+  validate :health_insurance, presence: true
+  validate :health_insurance_policyholder_name, presence: true
+  validate :health_insurance_policy_number, presence: true
+  validate :health_insurance_group_number, presence: true
+  validate :no_health_insurance, presence: true
+  validate :hay_fever_asthma_respiratory_conditions, presence: true
+  validate :diabetes, presence: true
+  validate :eczema_skin_rashes, presence: true
+  validate :heart_conditions, presence: true
+  validate :bedwetting, presence: true
+  validate :colds_sore_throats_earaches, presence: true
+  validate :adhd_odd_ocd, presence: true
+  validate :convulsions_seizures, presence: true
+  validate :shortness_of_breath, presence: true
+  validate :aspergers_autism, presence: true
+  validate :other_health_info, presence: true
+  validate :previous_health_history, presence: true
+  validate :has_infectious_disease, presence: true
+  validate :has_infection_disease_explanation, presence: true
+  validate :known_allergies, presence: true
+  validate :immunization_up_to_date, presence: true
+  validate :tetanus_booster_shot, presence: true
+  validate :measles_mumps_shot, presence: true
+  validate :polio_shot, presence: true
+  validate :hepatitis_b_shot, presence: true
+  validate :parent_has_signed, presence: true
+  validate :camp_check_in_location, presence: true
+  validate :estimated_camp_fee, presence: true
+  validate :deposit_amount, presence: true
+  validate :balance_due, presence: true
 end
