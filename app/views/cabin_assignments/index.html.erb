@@ -1,3 +1,10 @@
 <h1>Cabin Assignments</h1>
 
-<%= link_to "New Cabin Assignments", new_cabin_assignment_path %>
+<table>
+<% @camp_sessions.each do |camp_session| %>
+  <tr>
+    <td><%= camp_session.number %></td>
+    <td><%= link_to "Cabin Assignments", [camp_session, :cabin_assignments] %></td>
+  </tr>
+<% end %>
+</table>

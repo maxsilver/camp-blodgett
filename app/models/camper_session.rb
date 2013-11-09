@@ -3,6 +3,9 @@ class CamperSession < ActiveRecord::Base
   belongs_to :camper_registration
   belongs_to :cabin
 
+  validates :camper_registration, presence: true
+  validates :camp_session, presence: true
+
   def self.kids(camp_session, cabin)
     includes(:camper_registration).where(cabin_id: cabin.id, camp_session_id: camp_session.id).order('camper_registrations.age_at_start_of_camp')
   end
@@ -24,5 +27,7 @@ class CamperSession < ActiveRecord::Base
         camp_session.camper_sessions.create!(cabin_id: c.id, camper_registration_id: kid.id)
       end
     end
+
+    camp_session.reload
   end
 end

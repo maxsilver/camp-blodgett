@@ -1,14 +1,16 @@
 class CabinAssignmentsController < ApplicationController
   def index
+    @camp_sessions = CampSession.all
   end
 
   def show
+    @camp_session = CampSession.where(id: params[:camp_session_id]).first  
+    @camp_season  = @camp_session.camp_season
+    CamperSession.auto_assign(@camp_session) unless @camp_session.has_assignments?
   end
 
   def new
-    @camp_season  = CampSeason.last
-    @camp_session = @camp_season.camp_sessions.last
-    CamperSession.auto_assign(@camp_session) unless @camp_session.camper_registrations.any?
+    
   end
 
   def edit

@@ -7,4 +7,13 @@ class CampSession < ActiveRecord::Base
   
   validates :start_date, presence: true
   validates :end_date, presence: true
+
+  def has_assignments?
+    assigned_campers = CamperSession
+      .where(camp_session_id: self.id)
+      .where("cabin_id IS NOT NULL")
+      .count
+
+    assigned_campers > 0
+  end
 end
