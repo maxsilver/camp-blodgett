@@ -17,6 +17,15 @@ class CamperRegistration < ActiveRecord::Base
   validates :zip, presence: true
   validates :adult_shirt_size, presence: true
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |camper_registration|
+        csv << camper_registration.attributes.values_at(*column_names)
+      end
+    end
+  end
+
   def self.males
     where(gender: 'M')
   end

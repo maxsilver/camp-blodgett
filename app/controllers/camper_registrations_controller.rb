@@ -4,6 +4,12 @@ class CamperRegistrationsController < ApplicationController
   def index
     params[:camp_season] ||= CampSeason.most_recent_year
     @camper_registrations = CampSeason.campers_for_year(params[:camp_season]).page(params[:page]).order('last_name ASC')
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @camper_registrations.to_csv }
+      format.xls { send_data @camper_registrations.to_csv(col_sep: "\t") }
+    end
   end
 
   def show
