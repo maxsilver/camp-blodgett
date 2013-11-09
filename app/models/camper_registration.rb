@@ -61,4 +61,12 @@ class CamperRegistration < ActiveRecord::Base
   validates :estimated_camp_fee, presence: true
   validates :deposit_amount, presence: true
   validates :balance_due, presence: true
+
+  def self.males
+    where(gender: 'M')
+  end
+
+  def self.females
+    where(gender: 'F')
+  end
 end
