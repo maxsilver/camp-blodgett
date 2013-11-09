@@ -44,7 +44,7 @@ class CreateCamperRegistrations < ActiveRecord::Migration
       t.boolean :convulsions_seizures
       t.boolean :shortness_of_breath
       t.boolean :aspergers_autism
-      t.text :other
+      t.text :other_health_info
       t.text :previous_health_history
       t.boolean :has_infectious_disease
       t.text :has_infection_disease_explanation
