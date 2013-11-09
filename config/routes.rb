@@ -1,4 +1,5 @@
 CampBlodgett::Application.routes.draw do
+  resources :reports
   resources :camp_seasons, except: [:destroy]
   resources :cabin_assignments, except: [:destroy]
   resources :cabins, except: [:destroy]
