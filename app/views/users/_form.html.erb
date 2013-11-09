@@ -1,9 +1,14 @@
 <%= form_for @user do |f| %>
-<%= f.label :email %>
-<%= f.text_field :email %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation, 'Password Confirmation' %>
-<%= f.password_field :password_confirmation %>
-<%= f.submit %>
+  <%= render partial: 'common/errors', locals: {record: @user} %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, :autofocus => true %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation, 'Password Confirmation' %>
+  <%= f.password_field :password_confirmation %>
+
+  <div class="button-holder"><%= f.submit %></div>
 <% end %>
