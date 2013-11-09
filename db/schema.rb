@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20131109015923) do
   add_index "camper_cabin_assignments", ["cabin_assignemnt_id"], name: "index_camper_cabin_assignments_on_cabin_assignemnt_id", using: :btree
 
   create_table "camper_registrations", force: true do |t|
+    t.boolean  "new_camper"
+    t.string   "how_did_you_hear_about_us"
     t.string   "last_name"
     t.string   "first_name"
     t.string   "middle_initial"
@@ -101,7 +103,7 @@ ActiveRecord::Schema.define(version: 20131109015923) do
     t.text     "other_health_info"
     t.text     "previous_health_history"
     t.boolean  "has_infectious_disease"
-    t.text     "has_infection_disease_explanation"
+    t.text     "has_infectious_disease_explanation"
     t.text     "known_allergies"
     t.boolean  "immunization_up_to_date"
     t.date     "tetanus_booster_shot"

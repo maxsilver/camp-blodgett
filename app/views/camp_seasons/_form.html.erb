@@ -1,4 +1,5 @@
 <%= form_for @camp_season do |f| %>
+<%= render partial: 'common/errors', locals: {record: @camp_season} %>
 <%= f.label :year %>
 <%= f.text_field :year %>
 <%= f.submit %>
