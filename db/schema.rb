@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109015923) do
+ActiveRecord::Schema.define(version: 20131109034622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,17 +88,17 @@ ActiveRecord::Schema.define(version: 20131109015923) do
     t.string   "health_insurance_policy_number"
     t.string   "health_insurance_group_number"
     t.boolean  "no_health_insurance"
-    t.boolean  "hay_feaver_asthma_respiratory_conditions"
+    t.boolean  "hay_fever_asthma_respiratory_conditions"
     t.boolean  "diabetes"
     t.boolean  "eczema_skin_rashes"
-    t.boolean  "heat_conditions"
+    t.boolean  "heart_conditions"
     t.boolean  "bedwetting"
     t.boolean  "colds_sore_throats_earaches"
     t.boolean  "adhd_odd_ocd"
     t.boolean  "convulsions_seizures"
     t.boolean  "shortness_of_breath"
     t.boolean  "aspergers_autism"
-    t.text     "other"
+    t.text     "other_health_info"
     t.text     "previous_health_history"
     t.boolean  "has_infectious_disease"
     t.text     "has_infection_disease_explanation"
@@ -109,15 +109,13 @@ ActiveRecord::Schema.define(version: 20131109015923) do
     t.date     "polio_shot"
     t.date     "hepatitis_b_shot"
     t.boolean  "parent_has_signed"
-    t.integer  "year"
     t.string   "camp_check_in_location"
-    t.text     "session_numbers"
-    t.integer  "estimated_camp_fee_cents",                 default: 0,     null: false
-    t.string   "estimated_camp_fee_currency",              default: "USD", null: false
-    t.integer  "deposit_amount_cents",                     default: 0,     null: false
-    t.string   "deposit_amount_currency",                  default: "USD", null: false
-    t.integer  "balance_due_cents",                        default: 0,     null: false
-    t.string   "balance_due_currency",                     default: "USD", null: false
+    t.integer  "estimated_camp_fee_cents",                default: 0,     null: false
+    t.string   "estimated_camp_fee_currency",             default: "USD", null: false
+    t.integer  "deposit_amount_cents",                    default: 0,     null: false
+    t.string   "deposit_amount_currency",                 default: "USD", null: false
+    t.integer  "balance_due_cents",                       default: 0,     null: false
+    t.string   "balance_due_currency",                    default: "USD", null: false
     t.integer  "camp_season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -127,9 +125,12 @@ ActiveRecord::Schema.define(version: 20131109015923) do
     t.text     "description"
     t.integer  "amount_cents",    default: 0,     null: false
     t.string   "amount_currency", default: "USD", null: false
+    t.integer  "camp_season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "discounts", ["camp_season_id"], name: "index_discounts_on_camp_season_id", using: :btree
 
   create_table "medications", force: true do |t|
     t.string   "name"
@@ -141,5 +142,23 @@ ActiveRecord::Schema.define(version: 20131109015923) do
   end
 
   add_index "medications", ["camper_registration_id"], name: "index_medications_on_camper_registration_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
