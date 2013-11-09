@@ -35,8 +35,8 @@ class CabinSplitter
       end
     end
 
-    final_boy_cabins  = assign_boys_to_cabin(boys, number_of_boys, number_of_boy_cabins)
-    final_girl_cabins = assign_girls_to_cabin(girls, number_of_girls, number_of_girl_cabins)
+    final_boy_cabins  = assign_kids_to_cabin(boys, number_of_boys, number_of_boy_cabins)
+    final_girl_cabins = assign_kids_to_cabin(girls, number_of_girls, number_of_girl_cabins)
 
     final_boy_cabins.concat(final_girl_cabins)
   end
@@ -50,14 +50,14 @@ class CabinSplitter
     number_of_cabins.times do 
       cabins << []
     end
-
-    number_of_extra_kids             = number_of_kids % cabins
-    minimum_number_of_kids_per_cabin = (number_of_kids - extra_kids) / number_of_cabins
+    
+    number_of_extra_kids             = number_of_kids % cabins.length
+    minimum_number_of_kids_per_cabin = (number_of_kids - number_of_extra_kids) / number_of_cabins
     
     array_of_kids = kids.to_a
 
     cabins.each do |cabin|
-      minimum_number_of_kids_per_cabin.times { cabin[:kids] << array_of_kids.pop }
+      minimum_number_of_kids_per_cabin.times { cabin << array_of_kids.pop }
       
       unless number_of_extra_kids == 0
         cabin << array_of_kids.pop

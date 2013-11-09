@@ -9,7 +9,16 @@ class CabinAssignmentsController < ApplicationController
   end
 
   def new
-    @cabin_assignment = CabinAssignment.new
+    number_of_cabins = Cabin.count
+    boys             = CamperRegistration.males
+    girls            = CamperRegistration.females
+
+    place_holder_cabins = CabinSplitter.new(number_of_cabins, boys, girls).split
+
+    @cabins = []
+    Cabin.all.each do |cabin|
+      @cabins << OpenStruct.new(id: cabin.id, name: cabin.name, kids: place_holder_cabins.shift.compact)
+    end
   end
 
   def edit

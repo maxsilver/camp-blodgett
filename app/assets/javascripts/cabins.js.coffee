@@ -28,7 +28,6 @@ $ ->
       $(kid).find(".move").html(select).find("select").change moveKid
       $(kid).find(".move select").val(currentCabin)
 
-
   moveKid = ->
     moveTo = $(this).val()
     kid    = $(this).parents(".kid")

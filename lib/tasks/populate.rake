@@ -65,7 +65,7 @@ unless Rails.env.production?
             other_health_info: Faker::Lorem.sentence,
             previous_health_history: Faker::Lorem.sentence,
             has_infectious_disease: false,
-            has_infection_disease_explanation: Faker::Lorem.sentence,
+            has_infectious_disease_explanation: Faker::Lorem.sentence,
             known_allergies: Faker::Lorem.sentence,
             immunization_up_to_date: false,
             tetanus_booster_shot: Time.at(rand_in_range(birth_date.to_f, Time.now.to_f)),
@@ -74,9 +74,9 @@ unless Rails.env.production?
             hepatitis_b_shot: Time.at(rand_in_range(birth_date.to_f, Time.now.to_f)),
             parent_has_signed: false,
             camp_check_in_location: Faker::Address.street_address,
-            estimated_camp_fee: Money.new(100, 'USD'),
-            deposit_amount: Money.new(100, 'USD'),
-            balance_due: Money.new(100, 'USD')
+            estimated_camp_fee_cents: 1000,
+            deposit_amount_cents: 1000,
+            balance_due_cents: 1000
           }
 
           CamperRegistration.create!(attrs)
