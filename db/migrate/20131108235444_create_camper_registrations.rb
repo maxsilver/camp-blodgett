@@ -34,7 +34,7 @@ class CreateCamperRegistrations < ActiveRecord::Migration
       t.string :health_insurance_policy_number
       t.string :health_insurance_group_number
       t.boolean :no_health_insurance
-      t.boolean :hay_feaver_asthma_respiratory_conditions
+      t.boolean :hay_fever_asthma_respiratory_conditions
       t.boolean :diabetes
       t.boolean :eczema_skin_rashes
       t.boolean :heat_conditions
