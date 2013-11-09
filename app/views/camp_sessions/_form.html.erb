@@ -1,0 +1,9 @@
+<%= form_for @camp_session do |f| %>
+<%= f.label :start_date %>
+<%= f.date_field :start_date %>
+<%= f.label :end_date %>
+<%= f.date_field :end_date %>
+<%= f.label :camp_season %>
+<%= f.select :camp_season %>
+<%= f.submit %>
+<% end %>

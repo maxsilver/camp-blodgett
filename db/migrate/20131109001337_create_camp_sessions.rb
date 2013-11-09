@@ -5,6 +5,7 @@ class CreateCampSessions < ActiveRecord::Migration
       t.date :start_date
       t.date :end_date
       t.string :age_range
+      t.belongs_to :camp_season, index: true
 
       t.timestamps
     end

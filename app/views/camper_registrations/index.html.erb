@@ -1,3 +1,18 @@
 <h1>Camper Registrations</h1>
 
 <%= link_to 'New Camper Registration', new_camper_registration_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @camper_registrations.each do |camper| %>
+    <tr>
+      <td><%= link_to "#{camper.last_name}, #{camper.first_name}", camper_registration_path(camper) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,8 +1,13 @@
 CampBlodgett::Application.routes.draw do
-  resources :reports
+  root to: 'camper_registrations#index'
+
+  devise_for :users
+
+  resources :users
+
   resources :camp_seasons, except: [:destroy]
+  resources :camp_sessions, except: [:destroy]
   resources :cabin_assignments, except: [:destroy]
   resources :cabins, except: [:destroy]
-  resources :sessions, except: [:destroy]
   resources :camper_registrations, except: [:destroy]
 end

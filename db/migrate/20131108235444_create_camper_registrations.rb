@@ -61,7 +61,7 @@ class CreateCamperRegistrations < ActiveRecord::Migration
       t.money :estimated_camp_fee
       t.money :deposit_amount
       t.money :balance_due
-      t.belongs_to :camp_season
+      t.belongs_to :camp_season, index: true
 
       t.timestamps
     end

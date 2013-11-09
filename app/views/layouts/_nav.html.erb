@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    <li><%= link_to 'Camper Registration', camper_registrations_path %></li>
+    <li><%= link_to 'Cabin Assignments', cabin_assignments_path %></li>
+    <li><%= link_to 'Cabins', cabins_path %></li>
+    <li><%= link_to 'Camp Sessions', camp_sessions_path %></li>
+    <li><%= link_to 'Camp Season', camp_seasons_path %></li>
+    <li><%= link_to 'Users', users_path %></li>
+    <% if current_user %>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% end %>
+  </ul>
+</nav>
