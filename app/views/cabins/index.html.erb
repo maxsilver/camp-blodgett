@@ -10,7 +10,7 @@
 <tbody>
   <% @cabins.each do |cabin| %>
   <tr>
-    <td><%= link_to cabin.name, cabin_path(cabin) %></td>
+    <td><%= cabin.name %></td>
     <td>
       <%= link_to 'Edit', edit_cabin_path(cabin) %>
     </td>

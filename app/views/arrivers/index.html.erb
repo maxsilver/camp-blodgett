@@ -16,6 +16,8 @@ td.spacer {
 }
 </style>
 
+<%= render partial: 'common/current_session_header', locals: {session_number: @camp_session.number, season_year: @camp_season.year} %>
+
 <table class="table">
   <thead>
     <tr class="super-heading">

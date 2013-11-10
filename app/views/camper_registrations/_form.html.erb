@@ -1,4 +1,5 @@
 <%= form_for @camper_registration do |f| %>
+<%= render partial: 'common/errors', locals: {record: @camper_registration} %>
 <%= label_tag :camp_season, 'Season' %>
 <%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, CampSeason.most_recent_year) %>
 <%= render partial: 'common/errors', locals: {record: @camper_registration} %>
@@ -153,7 +154,7 @@
   <legend><h3>Medications</h3></legend>
   <p>Provide List of Medications/Dosages</p>
   <%= f.fields_for :medications do |medication| %>
-    <%= render partial: 'medication_fields', locals: {f: medication} %>
+  <%= render partial: 'medication_fields', locals: {f: medication} %>
   <% end %>
   <%= link_to_add_fields 'Add Medication', f, :medications %>
 </fieldset>
@@ -161,10 +162,10 @@
 <fieldset>
   <legend><h3>Sessions</h3></legend>
   <%= hidden_field_tag 'camper_registration[camp_session_ids][]', nil %>
-  <% CampSeason.most_recent.camp_sessions.each do |session| %>
+  <% CampSeason.most_recent.camp_sessions.order('number ASC').each do |session| %>
   <div class="form-group">
-  <%= check_box_tag 'camper_registration[camp_session_ids][]', session.id, @camper_registration.camp_session_ids.include?(session.id), id: dom_id(session) %>
-  <%= label_tag dom_id(session), "Session #{session.number}", :class => "checkbox-label" %>
+    <%= check_box_tag 'camper_registration[camp_session_ids][]', session.id, @camper_registration.camp_session_ids.include?(session.id), id: dom_id(session) %>
+    <%= label_tag dom_id(session), "Session #{session.number}", :class => "checkbox-label" %>
   </div>
   <% end %>
 </fieldset>
