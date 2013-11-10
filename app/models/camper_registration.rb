@@ -29,7 +29,6 @@ class CamperRegistration < ActiveRecord::Base
             "no cabin"
           else
             print "GOT ONE: " + camper_session.cabin.name
-            debugger
             camper_session.cabin.name
           end
         end
