@@ -11,7 +11,7 @@ var CamperSessions = (function() {
           for (var i = 0; i < camp_sessions.length; i++) {
             session = camp_sessions[i];
             events_sess.push({
-              title: session["number"],
+              title: ("Session " + session["number"]),
               start: moment(session["start_date"]),
               end: moment(session["end_date"])
               // title: session["number"],
@@ -21,6 +21,7 @@ var CamperSessions = (function() {
           }
           console.log(events_sess);
           $('#calendar').fullCalendar({
+            contentHeight: 500,
             editable: false,
             events: events_sess
           });

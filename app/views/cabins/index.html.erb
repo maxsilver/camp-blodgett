@@ -1,11 +1,10 @@
 <h1>Cabins</h1>
 
-<%= link_to 'New Cabin', new_cabin_path %>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
+      <th>Action</th>
 </tr>
   </thead>
 <tbody>
@@ -18,3 +17,5 @@
   <% end %>
 </tbody>
 </table>
+
+<%= link_to 'New Cabin', new_cabin_path, :class => "new-cabin blue-button button" %>

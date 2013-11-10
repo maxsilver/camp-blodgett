@@ -21,7 +21,10 @@ class CamperRegistration < ActiveRecord::Base
     CSV.generate(options) do |csv|
       csv << column_names
       all.each do |camper_registration|
-        csv << camper_registration.attributes.values_at(*column_names)
+        cabins = CampSeason.where(year: camper_registration.session_year).first.camp_sessions.map do |session|
+          camper_registration.camper_sessions.where(camp_session_id: session.id).first.name
+        end
+        csv << camper_registration.attributes.values_at(*column_names) + cabins
       end
     end
   end

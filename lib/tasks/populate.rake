@@ -18,8 +18,8 @@ unless Rails.env.production?
 
         CampSession.delete_all
         (1..6).each do |i|
-          CampSession.create number: i, camp_season: season2012, start_date: Date.today, end_date: Date.today
-          CampSession.create number: i, camp_season: season2013, start_date: Date.today, end_date: Date.today
+          CampSession.create number: i, camp_season: season2012, start_date: Date.today + (i*7).days + 1.days - 1.year, end_date: Date.today + ((i*7) + 7).days - 1.year
+          CampSession.create number: i, camp_season: season2013, start_date: Date.today + (i*7).days + 1.days, end_date: Date.today + ((i*7) + 7).days
         end
 
         def rand_in_range(from, to)
@@ -95,6 +95,7 @@ unless Rails.env.production?
 
           camper = CamperRegistration.create!(attrs)
           season = (kid_n % 2) == 0 ? season2012 : season2013
+
           season.camp_sessions.sample.camper_registrations << camper
         end
 

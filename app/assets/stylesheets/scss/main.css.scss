@@ -16,15 +16,18 @@
 @import "partials/buttons";
 @import "partials/login";
 @import "partials/nav";
+@import "partials/footer";
 
 // Vendor
 @import "fullcalendar";
 
-@import "shared";
-
 // Pages
 @import "cabin_assignments/show";
 @import "partials/new_camper_registration";
+@import "cabins/cabins";
+@import "camp_session/camp-session";
+@import "seasons/seasons";
+@import "users/users";
 
 // Utilities go last in case over-rides are needed
 @import "partials/utilities";

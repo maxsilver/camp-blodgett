@@ -1,8 +1,6 @@
 <h1>Camp Seasons</h1>
 
-<%= link_to 'New Camp Season', new_camp_season_path %>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Year</th>
@@ -17,3 +15,5 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'New Camp Season', new_camp_season_path, :class => "new-camp-season blue-button button" %>

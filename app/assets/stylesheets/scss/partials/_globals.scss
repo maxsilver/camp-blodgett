@@ -1,6 +1,17 @@
+html {
+  @include background(image-url("body-bg.jpg") no-repeat bottom #f4ffff);
+  background-size: cover;
+  min-height: 1000px;
+}
 
 .container {
   @include container;
+}
+
+.container#main {
+  overflow: hidden;
+  background-color: rgba(white,.75);
+  min-height: 1000px;
 }
 
 a {
@@ -10,4 +21,8 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.error{
+  color: red;
 }

@@ -1,0 +1,13 @@
+footer {
+  @include background($blue);
+  border-top: 1px solid darken($brand-primary, 11%);
+  position:fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+
+  .container {
+    padding: 1em;
+    background: transparent;
+  }
+}
