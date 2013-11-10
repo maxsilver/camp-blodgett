@@ -13,7 +13,6 @@
       <th>Insurance</th>
       <th>Shots</th>
       <th>Signature</th>
-      <th>SFSP</th>
       <th>Notes</th>
     </tr>
   </thead>
@@ -32,7 +31,6 @@
         <td><%= departer.any_insurance_information_present? ? "" : "Needed" %></td>
         <td><%= departer.immunization_up_to_date ? "" : "Needed" %></td>
         <td><%= departer.parent_has_signed ? "" : "Needed" %></td>
-        <td></td>
         <td><%= departer.other_health_info %></td>
       </tr>
     <% end %>
