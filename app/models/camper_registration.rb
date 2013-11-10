@@ -19,7 +19,7 @@ class CamperRegistration < ActiveRecord::Base
 
   def self.to_csv(season, options = {})
     CSV.generate(options) do |csv|
-      session_names = CampSeason.where(year: season).first.camp_sessions.order(:number).map { |session| "Session "+session.number.to_s }
+      session_names = CampSeason.where(year: season).first.camp_sessions.order(:number).map { |session| "Session " + session.number.to_s }
       csv << column_names + session_names
       all.each do |camper_registration|
         cabins = CampSeason.where(year: camper_registration.season_year).first.camp_sessions.order(:number).map do |session|
@@ -39,7 +39,7 @@ class CamperRegistration < ActiveRecord::Base
 
   def session_numbers
     camp_sessions.map(&:number).join(', ')
-  end 
+  end
 
   def self.males
     where(gender: 'M')

@@ -5,9 +5,6 @@ class CabinsController < ApplicationController
     @cabins = Cabin.all
   end
 
-  def show
-  end
-
   def new
     @cabin = Cabin.new
   end
