@@ -41,4 +41,8 @@ class CamperRegistration < ActiveRecord::Base
   def bus_check_box_applies
     camp_check_in_location != 'Camp'
   end
+
+  def parent_or_guardian_preferred_phone
+    parent_or_guardian_home_phone # placeholder
+  end
 end

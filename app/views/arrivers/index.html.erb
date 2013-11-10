@@ -1,0 +1,56 @@
+<h1>Arrivers Doc</h1>
+
+<style>
+.super-heading {
+  text-align: center;
+  background-color: #FFF;
+}
+.super-heading td {
+  background-color: none !important;
+}
+#camper-heading, #parent-heading {
+  border-bottom: 4px solid #000;
+}
+td.spacer {
+  width: 40px;
+}
+</style>
+
+<table class="table">
+  <thead>
+    <tr class="super-heading">
+      <td colspan="4" id="camper-heading">Camper</td>
+      <td class="spacer"></td>
+      <td colspan="2" id="parent-heading">Parent/Guardian</td>
+      <td class="spacer"></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>MI</th>
+      <th>Gender</th>
+      <th></th>
+      <th>Name</th>
+      <th>Relationship</th>
+      <th></th>
+      <th>Signature</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @arrivers.each do |arriver| %>
+      <tr>
+        <td><%= arriver.last_name %></td>
+        <td><%= arriver.first_name %></td>
+        <td><%= arriver.middle_initial %></td>
+        <td><%= arriver.gender %></td>
+        <td></td>
+        <td><%= arriver.parent_or_guardian_name %></td>
+        <td><%= arriver.parent_or_guardian_relationship %></td>
+        <td></td>
+        <td></td>
+        <td><%= arriver.parent_or_guardian_preferred_phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
