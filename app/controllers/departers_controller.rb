@@ -1,5 +1,7 @@
 class DepartersController < ApplicationController
   def index
-    @departers = CampSession.find(params[:camp_session_id]).camper_registrations
+    @camp_session = CampSession.find(params[:camp_session_id])
+    @camp_season = @camp_session.camp_season
+    @departers = @camp_session.camper_registrations
   end
 end

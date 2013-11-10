@@ -4,13 +4,10 @@ CampBlodgett::Application.routes.draw do
   devise_for :users
 
   resources :users
-
   resources :cabin_assignments, only: [:index]
   resources :camp_sessions, except: [:destroy] do
-    resources :departers do
-    end
-    resources :arrivers do
-    end
+    resources :departers
+    resources :arrivers
     resource :cabin_assignments
   end
   resources :camp_seasons, except: [:destroy]
