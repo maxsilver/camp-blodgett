@@ -9,6 +9,7 @@
       <th>Season</th>
       <th>Action</th>
       <th>Action</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
       <td><%= session.camp_season.year %></td>
       <td><%= link_to "Cabin Doc", [session, :cabin_assignments] %></td>
       <td><%= link_to "Departure Doc", camp_session_departers_path(session) %></td>
+      <td><%= link_to "Arrival Doc", camp_session_arrivers_path(session) %></td>
     </tr>
     <% end %>
   </tbody>

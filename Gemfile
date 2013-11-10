@@ -22,6 +22,7 @@ gem "devise", "~> 3.2.0"
 
 group :development, :test do
   gem 'debugger'
+  gem "rspec-rails", "~> 2.14.0"
 end
 
 group :production do

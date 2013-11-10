@@ -57,4 +57,14 @@ class CamperRegistration < ActiveRecord::Base
   def bus_check_box_applies
     camp_check_in_location != 'Camp'
   end
+
+  def parent_or_guardian_preferred_phone
+    # The order of the numbers below is significant.
+    # The "best" phone number is first.
+    [
+      parent_or_guardian_home_phone,
+      parent_or_guardian_cell_phone,
+      parent_or_guardian_work_phone
+    ].each { |number| return number if number.present? }
+  end
 end

@@ -1,19 +1,26 @@
 <h1>Camper Registrations</h1>
 
-<%= link_to 'New Camper Registration', new_camper_registration_path %>
 
-<p>
-  Download:
-  <%= link_to "CSV", camper_registrations_path(format: "csv") %> |
-  <%= link_to "Excel", camper_registrations_path(format: "xls") %>
-</p>
+<%= link_to 'New Camper Registration', new_camper_registration_path, class: "blue-button button new-cabin", style: "float: right" %>
 
-<%= form_tag camper_registrations_path, method: :get do %>
-<%= label_tag :camp_season, 'Season' %>
-<%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, params[:camp_season]) %>
-<% end %>
+<div style="float: left;">
+  <div>
+    Download:
+    <%= link_to "CSV", camper_registrations_path(format: "csv") %> |
+    <%= link_to "Excel", camper_registrations_path(format: "xls") %>
+  </div>
+  <div>
+    <%= form_tag camper_registrations_path, method: :get do %>
+      <%= label_tag :camp_season, 'Season' %>
+      <%= select_tag :camp_season, options_from_collection_for_select(CampSeason.order('year DESC').all, :year, :year, params[:camp_season]) %>
+    <% end %>
+  </div>
+</div>
 
-<table>
+<div style="clear: both;"/>
+<br />
+
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
