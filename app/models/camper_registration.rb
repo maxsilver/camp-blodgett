@@ -66,4 +66,14 @@ class CamperRegistration < ActiveRecord::Base
       parent_or_guardian_work_phone
     ].each { |number| return number if number.present? }
   end
+
+  def any_insurance_information_present?
+    [
+      health_insurance,
+      health_insurance_policyholder_name,
+      health_insurance_policy_number,
+      health_insurance_group_number
+    ].each { |field| return true if field.present? }
+    false
+  end
 end

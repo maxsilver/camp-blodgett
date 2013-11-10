@@ -29,7 +29,7 @@
         <td><%= departer.gender %></td>
         <td><%= departer.last_name %></td>
         <td><%= departer.first_name %></td>
-        <td></td>
+        <td><%= departer.any_insurance_information_present? ? "" : "Needed" %></td>
         <td><%= departer.immunization_up_to_date ? "" : "Needed" %></td>
         <td><%= departer.parent_has_signed ? "" : "Needed" %></td>
         <td></td>
