@@ -28,10 +28,10 @@
         <td><%= departer.last_name %></td>
         <td><%= departer.first_name %></td>
         <td></td>
+        <td><%= departer.immunization_up_to_date ? "" : "Needed" %></td>
+        <td><%= departer.parent_has_signed ? "" : "Needed" %></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td><%= departer.other_health_info%></td>
       </tr>
     <% end %>
   </tbody>
