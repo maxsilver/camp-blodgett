@@ -1,13 +1,21 @@
 <%= form_for @camp_session do |f| %>
-<%= render partial: 'common/errors', locals: {record: @camp_session} %>
-<%= f.label :number %>
-<%= f.text_field :number %>
+  <%= render partial: 'common/errors', locals: {record: @camp_session} %>
 
-<%= f.label :start_date, 'Start Date' %>
-<%= f.date_select :start_date, {discard_year: true}, {} %>
-<%= f.label :end_date, 'End Date' %>
-<%= f.date_select :end_date, {discard_year: true}, {} %>
-<%= f.label :camp_season, 'Camp Season' %>
-<%= f.collection_select :camp_season_id, CampSeason.order('year DESC').all, :id, :year, selected: CampSeason.most_recent.id %>
-<%= f.submit %>
+  <fieldset>
+    <legend><h3>Camp Session</h3></legend>
+
+    <%= f.label :start_date, 'Start Date' %>
+    <%= f.date_select :start_date, {discard_year: true}, {class: "short"} %>
+
+    <%= f.label :end_date, 'End Date' %>
+    <%= f.date_select :end_date, {discard_year: true},  {class: "short"} %>
+
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+
+    <%= f.label :camp_season, 'Camp Season' %>
+    <%= f.collection_select :camp_season_id, CampSeason.order('year DESC').all, :id, :year, selected: CampSeason.most_recent.id %>
+
+    <%= f.submit :class => "blue-button" %>
+  </fieldset>
 <% end %>
