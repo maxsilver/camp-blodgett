@@ -21,13 +21,26 @@ class CamperRegistration < ActiveRecord::Base
     CSV.generate(options) do |csv|
       csv << column_names
       all.each do |camper_registration|
-        cabins = CampSeason.where(year: camper_registration.session_year).first.camp_sessions.map do |session|
-          camper_registration.camper_sessions.where(camp_session_id: session.id).first.name
+        cabins = CampSeason.where(year: camper_registration.season_year).first.camp_sessions.map do |session|
+          camper_session = camper_registration.camper_sessions.where(camp_session_id: session.id).first
+          if camper_session.nil?
+            "no session"
+          elsif camper_session.cabin.nil?
+            "no cabin"
+          else
+            print "GOT ONE: " + camper_session.cabin.name
+            debugger
+            camper_session.cabin.name
+          end
         end
         csv << camper_registration.attributes.values_at(*column_names) + cabins
       end
     end
   end
+
+  def session_numbers
+    camp_sessions.map(&:number).join(', ')
+  end 
 
   def self.males
     where(gender: 'M')
