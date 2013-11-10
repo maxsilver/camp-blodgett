@@ -19,6 +19,7 @@ gem 'money-rails'
 gem 'faker', '~> 1.2.0'
 gem 'will_paginate'
 gem "devise", "~> 3.2.0"
+gem 'animate-rails', '~> 1.0.3'
 
 group :development, :test do
   gem 'debugger'

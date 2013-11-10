@@ -34,7 +34,7 @@ moveKid = ->
 
   $.ajax(
     type: "POST"
-    url: "/camp_sessions/#{camp_session_id}/cabin_assignments", # use current url
+    url: "/camp_sessions/#{camp_session_id}/cabin_assignments",
     dataType: 'json',
     data: 
       _method: 'PUT',
@@ -42,8 +42,13 @@ moveKid = ->
       camp_session_id: camp_session_id,
       cabin_id: $("##{moveTo}").data("cabin-id")
     success: () ->
-      $("##{moveTo} table").append(kid)
-      updateCabinDropdowns()
+      kid.addClass('animated slideOutLeft')
+      setTimeout(() ->
+        kid.removeClass('slideOutLeft')
+        kid.addClass('slideInLeft')
+        $("##{moveTo} table").append(kid)
+        updateCabinDropdowns()
+      , 1000)
   )
 
 $(document).ready ->
