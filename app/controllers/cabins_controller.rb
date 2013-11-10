@@ -18,7 +18,7 @@ class CabinsController < ApplicationController
   def create
     @cabin = Cabin.new(cabin_params)
     if @cabin.save
-      redirect_to @cabin
+      redirect_to cabins_path
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class CabinsController < ApplicationController
 
   def update
     if @cabin.update(cabin_params)
-      redirect_to @cabin
+      redirect_to cabins_path
     else
       render 'edit'
     end
