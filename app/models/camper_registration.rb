@@ -17,18 +17,18 @@ class CamperRegistration < ActiveRecord::Base
   validates :zip, presence: true
   validates :adult_shirt_size, presence: true
 
-  def self.to_csv(options = {})
+  def self.to_csv(season, options = {})
     CSV.generate(options) do |csv|
-      csv << column_names
+      session_names = CampSeason.where(year: season).first.camp_sessions.order(:number).map { |session| "Session "+session.number.to_s }
+      csv << column_names + session_names
       all.each do |camper_registration|
-        cabins = CampSeason.where(year: camper_registration.season_year).first.camp_sessions.map do |session|
+        cabins = CampSeason.where(year: camper_registration.season_year).first.camp_sessions.order(:number).map do |session|
           camper_session = camper_registration.camper_sessions.where(camp_session_id: session.id).first
           if camper_session.nil?
-            "no session"
+            "" # "no session"
           elsif camper_session.cabin.nil?
-            "no cabin"
+            "" # "no cabin"
           else
-            print "GOT ONE: " + camper_session.cabin.name
             camper_session.cabin.name
           end
         end
