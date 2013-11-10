@@ -9,18 +9,24 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body class="<%= yield :section %>">
-<%= render 'layouts/nav' %>
+    <%= render 'layouts/nav' %>
+
     <div class="container" id="main">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
 
-<%= yield %>
+      <%= yield %>
     </div>
+
     <footer>
       <div class="container">
-
       </div>
     </footer>
+
   </body>
 </html>
