@@ -1,4 +1,4 @@
-.new_camper_registration {
+.new_camper_registration, .new_camp_session {
 
   label,
   p {
@@ -14,6 +14,11 @@
   select {
     margin-bottom: 1em;
     @include span-columns(6, 12);
+  }
+
+  select.short {
+    float: left;
+    @include span-columns(3,12);
   }
 
   input[type="checkbox"],
